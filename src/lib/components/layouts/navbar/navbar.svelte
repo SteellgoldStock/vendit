@@ -65,6 +65,10 @@
     .logo {
       display: flex;
       align-items: center;
+      
+      @media (min-width: $breakpoint-md) {
+        margin-left: 45%;
+      }
 
       img {
         border-radius: 20%;
