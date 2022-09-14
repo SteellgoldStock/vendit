@@ -90,8 +90,7 @@
         color: #fff;
         text-decoration: none;
         margin: 0 10px;
-        font-weight: 900;
-        text-transform: uppercase;
+        font-weight: 600;
         font-size: 15px;
 
         transition: all 0.1s ease-in-out;
