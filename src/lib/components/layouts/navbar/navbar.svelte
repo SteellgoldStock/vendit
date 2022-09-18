@@ -8,9 +8,9 @@
   </div>
 
   <div class="links" class:active={!active}>
-    <a href="/">Discover</a>
+    <a href="/">Discorver</a>
     <a href="/">Contact</a>
-    <a href="/" class="btn-primary">Dashboard</a>
+    <a href="/" class="button">Dashboard</a>
   </div>
 
   <i class="fa-solid " class:fa-x={active} class:fa-bars={!active} on:click={() => active = !active}></i>
@@ -24,17 +24,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(180deg, #465F85 0%, #333D61 100%);
+    background: $background;
 
     height: 7vh;
     padding: 0px 30px;
 
-    // Hide the "bars" icon on large screens
     i {
       display: none;
     }
 
-    // Adapt the navbar to the mobile screen size
     @media (max-width: $breakpoint-md) {
       flex-direction: column;
       background: none;
@@ -50,26 +48,18 @@
         top: 30px;
         right: 30px;
         z-index: 20;
-        color: #fff;
       }
 
       .logo {
         width: 100%;
         display: flex;
         justify-content: center;
-        background: linear-gradient(180deg, #465F85 0%, #333D61 100%);
+        background: $background;
         z-index: 10;
       }
     }
 
     .logo {
-      display: flex;
-      align-items: center;
-      
-      @media (min-width: $breakpoint-md) {
-        margin-left: 45%;
-      }
-
       img {
         border-radius: 20%;
         height: 50px;
@@ -87,17 +77,18 @@
       align-items: center;
 
       a {
-        color: #fff;
+        color: $white;
         text-decoration: none;
         margin: 0 10px;
-        font-weight: 600;
-        font-size: 15px;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-size: 20px;
 
         transition: all 0.1s ease-in-out;
       }
 
       a:hover {
-        color: $primary;
+        color: red;
       }
 
       @media (max-width: $breakpoint-md) {
@@ -107,7 +98,7 @@
         flex-direction: column;
         transition-duration: 0.50s;
 
-        background: #343E61;
+        background: #333D61;
         width: 100%;
 
         padding-top: 10px;
@@ -123,6 +114,10 @@
           font-size: 20px;
         }
       }
+    }
+
+    i {
+      color: $white;
     }
   }
 </style>
