@@ -65,8 +65,8 @@
         height: 50px;
 
         @media (max-width: $breakpoint-md) {
-          padding: 20px 0;
-          height: 50px;
+          padding: 40px 0;
+          height: 70px;
           border-radius: 40%;
         }
       }
@@ -80,9 +80,8 @@
         color: $white;
         text-decoration: none;
         margin: 0 10px;
-        font-weight: 700;
-        text-transform: uppercase;
-        font-size: 20px;
+        font-weight: 500;
+        font-size: 15px;
 
         transition: all 0.1s ease-in-out;
       }
@@ -115,7 +114,7 @@
 
         padding-top: 10px;
         padding: 10px 0;
-        gap: 3px;
+        gap: 15px;
         height: fit-content;
 
         &.active {
