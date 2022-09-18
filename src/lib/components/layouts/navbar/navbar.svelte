@@ -26,7 +26,7 @@
     align-items: center;
     background: $background;
 
-    height: 7vh;
+    height: 100px;
     padding: 0px 30px;
 
     i {
@@ -80,15 +80,27 @@
         color: $white;
         text-decoration: none;
         margin: 0 10px;
-        font-weight: 900;
+        font-weight: 700;
         text-transform: uppercase;
         font-size: 20px;
 
         transition: all 0.1s ease-in-out;
       }
 
+      a.button {
+        background: $button;
+        padding: 10px 20px;
+        border-radius: 20px;
+        color: $white;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      a.button:hover {
+        background: $button-hover;
+      }
+
       a:hover {
-        color: red;
+        color: #fff;
       }
 
       @media (max-width: $breakpoint-md) {
