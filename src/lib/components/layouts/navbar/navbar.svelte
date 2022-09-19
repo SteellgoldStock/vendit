@@ -26,7 +26,7 @@
     align-items: center;
     background: $background;
 
-    height: 100px;
+    height: 70px;
     padding: 0px 30px;
 
     i {

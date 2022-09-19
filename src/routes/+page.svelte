@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Navbar } from "$lib/components/layouts/navbar";
+  import { Sidebar } from "$lib/components/layouts/sidebar";
 </script>
 
-<Navbar />
+<Sidebar />
