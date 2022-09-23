@@ -96,10 +96,11 @@
 
       a.button:hover {
         background: $button-hover;
+        color: $white;
       }
 
       a:hover {
-        color: #fff;
+        color: $white-500;
       }
 
       @media (max-width: $breakpoint-md) {
