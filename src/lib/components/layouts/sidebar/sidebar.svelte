@@ -3,6 +3,10 @@
 </script>
 
 <div class="sidebar">
+  <div class="icon">
+    <img src="/assets/logos/NavbarIcon.png" alt="logo" />
+  </div>
+
   <div class="user">
     <a href="/" class="active">
       <i class="fa-solid fa-user"></i>
@@ -30,6 +34,11 @@
     padding: 20px;
     background-color: $primary;
 
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
     .user {
       display: flex;
       flex-direction: column;
@@ -39,7 +48,7 @@
       a {
         text-decoration: none;
         color: $white;
-        font-size: 1.2rem;
+        font-size: 15px;
 
         font-weight: 200;
 
