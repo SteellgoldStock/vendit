@@ -2,4 +2,4 @@
   import { Navbar } from "../navbar";
 </script>
 
-<Navbar />
+
