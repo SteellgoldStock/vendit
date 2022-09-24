@@ -1,19 +1,27 @@
 <script lang="ts">
   let active = false;
+
+  export let content = true;
 </script>
 
 <div class="nav">
-  <div class="logo">
-    <img src="/assets/logos/NavbarIcon.png" alt="Logo">
-  </div>
+  {#if content}
+    <div class="logo">
+      <img src="/assets/logos/NavbarIcon.png" alt="Logo">
+    </div>
 
-  <div class="links" class:active={!active}>
-    <a href="/">Discorver</a>
-    <a href="/">Contact</a>
-    <a href="/" class="button">Dashboard</a>
-  </div>
+    <div class="links" class:active={!active}>
+      <a href="/">Discorver</a>
+      <a href="/">Contact</a>
+      <a href="/" class="button">Dashboard</a>
+    </div>
 
-  <i class="fa-solid " class:fa-x={active} class:fa-bars={!active} on:click={() => active = !active}></i>
+    <i class="fa-solid " class:fa-x={active} class:fa-bars={!active} on:click={() => active = !active}></i>
+  {:else}
+    <div class="llogo">
+      <img src="/assets/logos/NavbarIcon.png" alt="Logo">
+    </div>
+  {/if}
 </div>
 
 <style lang="scss">
@@ -50,7 +58,7 @@
         z-index: 20;
       }
 
-      .logo {
+      .logo, .llogo {
         width: 100%;
         display: flex;
         justify-content: center;
@@ -59,7 +67,7 @@
       }
     }
 
-    .logo {
+    .logo, .llogo {
       img {
         border-radius: 20%;
         height: 50px;
@@ -70,6 +78,13 @@
           border-radius: 40%;
         }
       }
+    }
+
+    .llogo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
     }
 
     .links {
