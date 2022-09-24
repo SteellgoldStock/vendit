@@ -1,10 +1,15 @@
+<script lang="ts">
+  let active = true;
+</script>
+
 <div class="navbar">
+  <i class="sch fa-solid" class:fa-x={!active} class:fa-bars={active} on:click={() => active = !active}></i>
   <div class="icon">
     <img src="/assets/logos/NavbarIcon.png" width="40px" height="40px" alt="logo" />
   </div>
 </div>
 
-<div class="sidebar">
+<div class="sidebar" class:active={!active}>
   <div class="section">
     <a href="/" class="active"><i class="fa-solid fa-user"></i>Account</a>
     <a href="/"><i class="fa-solid fa-wallet"></i>Billing</a>
@@ -67,6 +72,21 @@
     background: $background;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
+
+    i.sch {
+      display: none;
+    }
+
+    @media (max-width: $breakpoint-md) {
+      i.sch {
+        display: block;
+        font-size: 20px;
+        position: absolute;
+        color: white;
+        left: 30px;
+        z-index: 20;
+      }
+    }
   }
 
   .sidebar {
@@ -110,6 +130,21 @@
 
       a:hover {
         background-color: #3E4869;
+      }
+    }
+
+    @media (max-width: $breakpoint-md) {
+      z-index: 1;
+      left: 0;
+      height: 100%;
+      padding: 20px;
+      width: 150px;
+      background-color: $primary;
+      transform: translateX(-100%);
+      transition: transform 0.5s ease-in-out;
+
+      &.active {
+        transform: translateX(0);
       }
     }
 
