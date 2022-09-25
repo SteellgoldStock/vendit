@@ -6,9 +6,11 @@
 <h1>Salut </h1>
 <div class="title">
   <h1>VENDIT</h1>
-  <Tag text="BETA" type="primary" />
+  <Tag text="BETA" type="dark" />
 </div>
 <Stars note={2.5} showNote={true} />
+<br>
+<Stars note={5} />
 
 <style lang="scss">
   @import "../lib/scss/colors.scss";
