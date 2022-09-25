@@ -97,7 +97,7 @@
     background-color: $primary;
 
     i {
-      margin-right: 5px;
+      margin-right: 10px;
     }
 
     .icon {
