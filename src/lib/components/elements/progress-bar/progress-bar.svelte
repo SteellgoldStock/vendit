@@ -27,7 +27,7 @@
   .progressbar {
     position: absolute;
     width: 100%;
-    height: 3px;
+    height: 5px;
     background: #455E84;
     overflow: hidden;
 
