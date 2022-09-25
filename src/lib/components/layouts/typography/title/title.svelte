@@ -1,15 +1,16 @@
 <script lang="ts">
   export let subtitle: string = "";
   export let size: "1" | "2" | "3" | "4" | "5" | "6" = "1";
+  export let weight: number = 500;
 </script>
 
 {#if subtitle}
   <div class="head">
-    <h1 class="xl{size}"><slot></slot></h1>
+    <h1 class="xl{size} w{weight}"><slot></slot></h1>
     <h2 class="xl2">{subtitle}</h2>
   </div>
 {:else}
-  <h1 class="xl{size}"><slot></slot></h1>
+  <h1 class="xl{size} w{weight}"><slot></slot></h1>
 {/if}
 
 <style lang="scss">
@@ -48,5 +49,41 @@
 
   h1.xl6 {
     font-size: 1rem;
+  }
+
+  h1.w100 {
+    font-weight: 100;
+  }
+
+  h1.w200 {
+    font-weight: 200;
+  }
+
+  h1.w300 {
+    font-weight: 300;
+  }
+
+  h1.w400 {
+    font-weight: 400;
+  }
+
+  h1.w500 {
+    font-weight: 500;
+  }
+
+  h1.w600 {
+    font-weight: 600;
+  }
+
+  h1.w700 {
+    font-weight: 700;
+  }
+
+  h1.w800 {
+    font-weight: 800;
+  }
+
+  h1.w900 {
+    font-weight: 900;
   }
 </style>

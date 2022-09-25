@@ -4,9 +4,8 @@
     import Title from "$lib/components/layouts/typography/title/title.svelte";
 </script>
 
-<h1>Salut </h1>
 <div class="title">
-  <h1>VENDIT</h1>
+  <Title weight={900}>VENDIT</Title>
   <Tag text="BETA" type="dark" />
   <Tag text="ALPHA" type="special" />
 </div>
