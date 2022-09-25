@@ -1,4 +1,7 @@
+<ProgressBar progress={40} />
+
 <script lang="ts">
+  import { ProgressBar } from "$lib/components/elements/progress-bar";
   import { Sidebar } from "$lib/components/layouts/sidebar";
 </script>
 
