@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Stars } from "$lib/components/elements/stars";
     import Tag from "$lib/components/elements/tag/tag.svelte";
+    import Title from "$lib/components/layouts/typography/title/title.svelte";
 </script>
 
 <h1>Salut </h1>
@@ -9,9 +10,60 @@
   <Tag text="BETA" type="dark" />
   <Tag text="ALPHA" type="special" />
 </div>
-<Stars note={2.5} showNote={true} />
+<Stars note={2.78} showNote={true} />
 <br>
 <Stars note={5} />
+
+
+<Title>
+  Hey les zamisss (1xl)
+</Title>
+
+<Title size="2">
+  Hey les zamisss (2xl)
+</Title>
+
+<Title size="3">
+  Hey les zamisss (3xl)
+</Title>
+
+<Title size="4">
+  Hey les zamisss (4xl)
+</Title>
+
+<Title size="5">
+  Hey les zamisss (5xl)
+</Title>
+
+<Title size="6">
+  Hey les zamisss (6xl)
+</Title>
+
+<hr>
+
+<Title subtitle="Sous-titre">
+  Hey les zamisss (1xl)
+</Title>
+
+<Title subtitle="Sous-titre" size="2">
+  Hey les zamisss (2xl)
+</Title>
+
+<Title subtitle="Sous-titre" size="3">
+  Hey les zamisss (3xl)
+</Title>
+
+<Title subtitle="Sous-titre" size="4">
+  Hey les zamisss (4xl)
+</Title>
+
+<Title subtitle="Sous-titre" size="5">
+  Hey les zamisss (5xl)
+</Title>
+
+<Title subtitle="Sous-titre" size="6">
+  Hey les zamisss (6xl)
+</Title>
 
 <style lang="scss">
   @import "../lib/scss/colors.scss";
