@@ -1,10 +1,11 @@
 <script lang="ts">
   export let note: number = 0;
+  export let showNote: boolean = false;
 
   import Star from "./Star.svelte";
 </script>
 
-<div class="card">
+<div class="card {showNote ? "large" : "normal"}">
   <div class="stars">
     {#each Array.from({ length: 5 }) as _, i}
       {#if note >= i + 1}
@@ -16,6 +17,12 @@
       {/if}
     {/each}
   </div>
+
+  {#if showNote}
+  <div class="note">
+    ({note}/5)
+  </div>
+{/if}
 </div>
 
 <style lang="scss">
@@ -38,6 +45,16 @@
       justify-content: center;
       align-items: center;
       gap: 5px;
+    }
+  }
+
+  .large {
+    width: 180px;
+
+    .note {
+      margin-left: 10px;
+      color: white;
+      font-weight: 400;
     }
   }
 </style>

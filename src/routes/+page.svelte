@@ -3,4 +3,4 @@
 </script>
 
 <h1>Salut</h1>
-<Stars note={2.5} />
+<Stars note={2.5} showNote={true} />

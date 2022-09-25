@@ -10,14 +10,14 @@
   
   i.half {
     color: $yellow;
-    background: linear-gradient(to right, $yellow 50%, $white-600 50%);
+    background: linear-gradient(to right, $yellow 50%, $white-100 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
   i.disabled {
-    color: $white-600;
+    color: $white-100;
   }
 
   i {
