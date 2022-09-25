@@ -3,17 +3,23 @@
   export let type: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark" | "special" = "primary";
 </script>
 
-<span class="tag {type}">
-  <div class="text">
-    {text}
-  </div>
-</span>
+<div class="tag">
+  <span class="tag {type}">
+    <div class="text">
+      {text}
+    </div>
+  </span>
+</div>
 
 <style lang="scss">
   @import "../../../scss/colors.scss";
   @import "../../../scss/variables.scss";
 
   .tag {
+    display: flex;
+  }
+
+  span.tag {
     background: $white-300;
     color: $white-900;
     padding: 5px 10px;
@@ -21,48 +27,48 @@
     font-weight: 800;
   }
 
-  .primary {
+  span.primary {
     background: $primary;
     color: $white;
   }
 
-  .secondary {
+  span.secondary {
     background: $secondary;
     color: $white;
   }
 
-  .success {
+  span.success {
     background: $green;
     color: $white;
   }
 
-  .danger {
+  span.danger {
     background: $red;
     color: $white;
   }
 
-  .warning {
+  span.warning {
     background: $orange;
     color: $white;
   }
 
-  .info {
+  span.info {
     background: $blue;
     color: $white;
   }
 
-  .light {
+  span.light {
     background: $white-100;
     color: $white-900;
     border: 2px solid $white-300;
   }
 
-  .dark {
+  span.dark {
     background: $white-900;
     color: $white;
   }
 
-  .special {
+  span.special {
     // text gradiant color
     background: linear-gradient(180deg, #465F85 0%, #3A496D 100%);
 
