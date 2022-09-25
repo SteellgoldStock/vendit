@@ -65,8 +65,8 @@
 
   .navbar {
     display: flex;
-    position: fixed top;
     align-items: center;
+    position: fixed top;
     justify-content: center;
     height: 60px;
     background: $background;

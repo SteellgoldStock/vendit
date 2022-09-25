@@ -1,95 +1,72 @@
 <script lang="ts">
-  import { Stars } from "$lib/components/elements/stars";
   import Tag from "$lib/components/elements/tag/tag.svelte";
-  import Title from "$lib/components/layouts/typography/title/title.svelte";
+    import Paragraph from "$lib/components/layouts/typography/paragraph/paragraph.svelte";
+import { Title } from "$lib/components/layouts/typography/title";
 </script>
 
-<div class="title">
-  <Title weight={900}>VENDIT</Title>
-  <Tag text="DARK" type="dark" />
+<div class="header">
+  <div class="title">
+    <Title color="white" weight={900}>VENDIT</Title>
+    <Tag text="BETA" type="special" />
+  </div>
+  <div class="subject">
+    <Paragraph>
+      Find your favorite PocketMine plugin sellers here
+    </Paragraph>
+  </div>
 </div>
 
-<Stars note={2.78} showNote={true} />
-<br>
-<Stars note={5} />
+<hr class="separator">
 
-<div class="tags">
-  <Tag text="PRIMARY" type="primary" />
-  <Tag text="SPECIAL" type="special" />
-  <Tag text="LIGHT" type="light" />
-  <Tag text="DANGER" type="danger" />
-  <Tag text="SUCCESS" type="success" />
-  <Tag text="WARNING" type="warning" />
-  <Tag text="INFO" type="info" />
+<div class="sellers">
+  <div class="title">
+    <Title color="white" weight={900} subtitle="and 30+ mores">DISCOVER ALL SELLERS</Title>
+  </div>
 </div>
-
-<Title>
-  Hey les zamisss (1xl)
-</Title>
-
-<Title size="2">
-  Hey les zamisss (2xl)
-</Title>
-
-<Title size="3">
-  Hey les zamisss (3xl)
-</Title>
-
-<Title size="4">
-  Hey les zamisss (4xl)
-</Title>
-
-<Title size="5">
-  Hey les zamisss (5xl)
-</Title>
-
-<Title size="6">
-  Hey les zamisss (6xl)
-</Title>
-
-<hr>
-
-<Title subtitle="Sous-titre">
-  Hey les zamisss (1xl)
-</Title>
-
-<Title subtitle="Sous-titre" size="2">
-  Hey les zamisss (2xl)
-</Title>
-
-<Title subtitle="Sous-titre" size="3">
-  Hey les zamisss (3xl)
-</Title>
-
-<Title subtitle="Sous-titre" size="4">
-  Hey les zamisss (4xl)
-</Title>
-
-<Title subtitle="Sous-titre" size="5">
-  Hey les zamisss (5xl)
-</Title>
-
-<Title subtitle="Sous-titre" size="6">
-  Hey les zamisss (6xl)
-</Title>
 
 <style lang="scss">
-  @import "../lib/scss/colors.scss";
-  @import "../lib/scss/variables.scss";
+  @import "../../src/lib/scss/colors.scss";
+  @import "../../src/lib/scss/variables.scss";
 
-  .title {
+  .header {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
+    padding: 50px 20px;
+    background: $primary;
+    color: $white;
 
-    h1 {
-      font-weight: 900;
+    @media (max-width: $breakpoint-md) {
+      padding: 10px 30px;
+      text-align: center;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .subject {
+      margin-top: -30px;
     }
   }
 
-  .tags {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  .sellers {
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+  }
+
+  .separator {
+    border: 0;
+    height: 5px;
+    // background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0));
+    background: white;
   }
 </style>
