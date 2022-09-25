@@ -14,6 +14,7 @@
 <Stars note={5} />
 
 <div class="tags">
+  <Tag text="PRIMARY" type="primary" />
   <Tag text="SPECIAL" type="special" />
   <Tag text="LIGHT" type="light" />
   <Tag text="DANGER" type="danger" />

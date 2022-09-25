@@ -1,6 +1,6 @@
 <script lang="ts">
   export let text = "Hello world";
-  export let type: "primary" | "secondary" | "success" | "danger" | "warning" | "info" | "light" | "dark" | "special" = "primary";
+  export let type: "primary" | "success" | "danger" | "warning" | "info" | "light" | "dark" | "special" = "primary";
 </script>
 
 <div class="tag">
@@ -29,11 +29,6 @@
 
   span.primary {
     background: $primary;
-    color: $white;
-  }
-
-  span.secondary {
-    background: $secondary;
     color: $white;
   }
 
