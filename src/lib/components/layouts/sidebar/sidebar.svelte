@@ -91,7 +91,7 @@
 
   .sidebar {
     height: 100%;
-    width: 15%;
+    width: 250px;
     position: fixed;
     padding: 20px;
     background-color: $primary;
