@@ -70,7 +70,7 @@
     .text {
       // text gradiant color
       background: linear-gradient(92.68deg, #EAE692 1.83%, #94DF9B 32.1%, #9BF9E6 62.37%, #79C3ED 92.64%);
-      -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 900;
     }

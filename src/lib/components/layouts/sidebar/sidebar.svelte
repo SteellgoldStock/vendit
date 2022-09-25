@@ -4,9 +4,7 @@
 
 <div class="navbar">
   <i class="sch fa-solid" class:fa-x={!active} class:fa-bars={active} on:click={() => active = !active}></i>
-  <div class="icon">
-    <img src="/assets/logos/NavbarIcon.png" width="40px" height="40px" alt="logo" />
-  </div>
+  <img src="/assets/logos/NavbarIcon.png" width="40px" height="40px" alt="logo" />
 </div>
 
 <div class="sidebar" class:active={!active}>
@@ -98,13 +96,6 @@
 
     i {
       margin-right: 10px;
-    }
-
-    .icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 20px;
     }
 
     .section {
