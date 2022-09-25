@@ -1,9 +1,23 @@
 <script lang="ts">
-  export let progress: number = 0;
+  let width: number = 1;
+  import { afterNavigate } from "$app/navigation";
+
+  function hideProgressBar() {
+    const progressBar = document.querySelector(".progressbar");
+    progressBar?.style.setProperty("display", "none");
+  }
+
+  afterNavigate(async () => {
+    width = 100;
+
+    setTimeout(() => {
+      hideProgressBar();
+    }, 1000);
+  });
 </script>
 
 <div class="progressbar">
-  <div class="progress" style="width: {progress}%"></div>
+  <div class="progress" style="width: {width}%"></div>
 </div>
 
 <style type="scss">
