@@ -41,6 +41,7 @@
     color: black;
     text-align: center;
     height: 1.5em;
+    font-size: 12 px;
   &:before {
     content: '';
     background: $white;
@@ -64,6 +65,7 @@
 
   .navbar {
     display: flex;
+    position: fixed top;
     align-items: center;
     justify-content: center;
     height: 60px;
