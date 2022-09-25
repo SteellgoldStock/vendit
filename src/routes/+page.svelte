@@ -7,6 +7,7 @@
 <div class="title">
   <h1>VENDIT</h1>
   <Tag text="BETA" type="dark" />
+  <Tag text="ALPHA" type="special" />
 </div>
 <Stars note={2.5} showNote={true} />
 <br>
