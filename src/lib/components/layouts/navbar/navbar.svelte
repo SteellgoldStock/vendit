@@ -45,8 +45,8 @@
         display: block;
         font-size: 30px;
 
-        top: 30px;
-        right: 30px;
+        top: 55px;
+        right: 35px;
         z-index: 20;
       }
 
