@@ -1,5 +1,1 @@
-<script lang="ts">
-  import { Sidebar } from "$lib/components/layouts/sidebar";
-</script>
-
-<Sidebar />
+<h1>Salut</h1>
