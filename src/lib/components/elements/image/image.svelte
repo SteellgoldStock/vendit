@@ -8,8 +8,8 @@
 </div>
 
 <style lang="scss">
-  @import "../../../../../lib/scss/colors.scss";
-  @import "../../../../../lib/scss/variables.scss";
+  @import "../../../../lib/scss/colors.scss";
+  @import "../../../../lib/scss/variables.scss";
 
   .image {
     display: flex;
