@@ -1,1 +1,0 @@
-export { default as ImagesGroup } from './group.svelte';
