@@ -54,6 +54,8 @@ import { Title } from "$lib/components/layouts/typography/title";
   }
 
   .sellers {
+    background: linear-gradient(180deg, #2B324E 35.24%, rgba(58, 70, 118, 0.9) 100%);
+    
     .title {
       display: flex;
       flex-direction: column;
