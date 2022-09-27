@@ -121,6 +121,7 @@
         height: 65px;
         opacity: 0.5;
       }
+      
     }
 
     @media (max-width: $breakpoint-md) {
