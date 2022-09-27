@@ -38,6 +38,8 @@
       <Image alt="User 11" src="/assets/users/fictives/11.png" />
     </div>
   </div>
+
+  <hr class="separator">
 </div>
 
 <style lang="scss">
@@ -105,6 +107,7 @@
 
     .images {
       margin-top: -10px;
+      
       .top {
         display: flex;
         justify-content: center;
@@ -122,10 +125,10 @@
         opacity: 0.5;
       }
       
+      padding-bottom: 50px;
     }
 
     @media (max-width: $breakpoint-md) {
-      // force h1 to be smaller
       .images {
         .top {
           height: 40px;
@@ -141,7 +144,6 @@
   .separator {
     border: 0;
     height: 5px;
-    // background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0));
-    background: white;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.30), rgba(0, 0, 0, 0));
   }
 </style>
