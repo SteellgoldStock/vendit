@@ -16,18 +16,22 @@
 <hr class="separator">
 
 <div class="sellers">
-  <div class="title">
-    <h2 class="title">Featured sellers</h2>
-    <p class="subtitle">These are our best sellers on this platform</p>
-  </div>
-
   <div class="row">
     <div class="left">
-      
+      <div class="title">
+        <h2 class="title">DISCOVER OUR SELLERS</h2>
+        <p class="subtitle">There are many more!</p>
+      </div>
     </div>
 
     <div class="right">
-
+      <div class="sellers-imgs">
+        <img src="https://cdn.discordapp.com/avatars/504392983244832780/ed108638e6cba46a3498bc6da92158f6.webp?size=256" alt="Gaëtan">
+        <img src="https://cdn.discordapp.com/avatars/533306853317279773/6eac2d06855a52de73bc48343a00a2c1.png?size=256" alt="Romain">
+        <img src="https://cdn.discordapp.com/avatars/371298344921726978/2e12f0a06b95725bf492c1a22e43b4b6.png?size=256" alt="Loupio">
+        <img src="https://cdn.discordapp.com/avatars/233351173665456129/a_cee03ee0f97ee3c550840d584bc55c21.png?size=256" alt="Bluzzi">
+        <img src="https://cdn.discordapp.com/avatars/162633729703936001/c68325b9d4509bcd7e4a56a32dd6ff30.png?size=256" alt="King">
+      </div>
     </div>
   </div>
 
