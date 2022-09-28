@@ -20,22 +20,14 @@
     <h2 class="title">Featured sellers</h2>
     <p class="subtitle">These are our best sellers on this platform</p>
   </div>
-  <div class="images">
-    <!-- TODO: Automatically generate this by top sellers of month -->
-    <div class="top">
-      <Image alt="User 1" src="/assets/users/fictives/1.png" />
-      <Image alt="User 2" src="/assets/users/fictives/2.png" />
-      <Image alt="User 3" src="/assets/users/fictives/3.png" />
-      <Image alt="User 4" src="/assets/users/fictives/4.png" />
-      <Image alt="User 5" src="/assets/users/fictives/5.png" />
-      <Image alt="User 6" src="/assets/users/fictives/6.png" />
+
+  <div class="row">
+    <div class="left">
+      
     </div>
-    <div class="bottom">
-      <Image alt="User 7" src="/assets/users/fictives/7.png" />
-      <Image alt="User 8" src="/assets/users/fictives/8.png" />
-      <Image alt="User 9" src="/assets/users/fictives/9.png" />
-      <Image alt="User 10" src="/assets/users/fictives/10.png" />
-      <Image alt="User 11" src="/assets/users/fictives/11.png" />
+
+    <div class="right">
+
     </div>
   </div>
 
