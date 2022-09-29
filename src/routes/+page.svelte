@@ -43,6 +43,35 @@ import Tag from "$lib/components/elements/tag/tag.svelte";
   <Separator />
 </div>
 
+<div class="products">
+  <div class="rows">
+    <div class="show-md text">
+      <h2>Buy or sell your plugins</h2>
+      <p>There are so many, add yours?<br>and be among the pinned!</p>
+    </div>
+    <div class="images">
+      <div class="col1">
+        <img class="img1" src="https://raw.githubusercontent.com/Bluzzi/ChestFinder/2d25f96f2b9009513647cf510abaab41b0f2927d/icon-cf.png" height="150px"alt="ChestFinder">
+        <img class="img2" src="https://raw.githubusercontent.com/nhanaz-pm-pl/AntiExplosions/df11dec1f62396e11b1540bea4ce4818947199b6/icon.png" height="150px"alt="AntiExplosions (nhanaz-pm-pl)">
+      </div>
+      <div class="col2">
+        <img class="img1" src="https://raw.githubusercontent.com/nhanaz-pm-pl/KeepInventory/ec115877db5dae7528532f168aa925d000cd6d38/icon.png" height="100px" alt="KeepInventory (nhanaz-pm-pl)">
+        <img class="img2" src="https://raw.githubusercontent.com/nhanaz-pm-pl/HealthLimit/f3b5a5332a7e06a93d968d433aec8ac15791454a/icon.png" height="100px" alt="HealthLimit (nhanaz-pm-pl)">
+      </div>
+      <div class="col3">
+        <img class="img1" src="https://raw.githubusercontent.com/nhanaz-pm-pl/BetterCancel/79e0c00e97e5546367eabc1539817bfa6d7f8434/icon.png" height="90px" alt="BetterCancel (nhanaz-pm-pl)">
+        <img class="img2" src="https://raw.githubusercontent.com/nhanaz-pm-pl/AntiFallDamage/75d1a3c945bde136a9674f6c31f3ccd3b3fe5e03/icon.png" height="100px" alt="AntiFallDamage (nhanaz-pm-pl)">
+      </div>
+    </div>
+    <div class="hidden-md text">
+      <h2>Buy or sell your plugins</h2>
+      <p>There are so many, add yours?<br>and be among the pinned!</p>
+    </div>
+  </div>
+
+  <Separator />
+</div>
+
 <style lang="scss">
   @import "../../src/lib/scss/colors.scss";
   @import "../../src/lib/scss/variables.scss";
@@ -201,4 +230,173 @@ import Tag from "$lib/components/elements/tag/tag.svelte";
       }
     }
   }
+
+  .products {
+      margin-top: -8px;
+      background: linear-gradient(180deg, #2B324E 35.24%, rgba(58, 70, 118, 0.9) 100%);
+    
+      .rows {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        padding: 50px 20px;
+        margin: 0 auto;
+        max-width: 1200px;
+    
+        .text {
+          h2 {
+            font-size: 2rem;
+            font-weight: 900;
+            margin: 0;
+            color: $white;
+          }
+    
+          p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0;
+            color: $white-600;
+          }
+        }
+    
+        .images {
+          display: flex;
+          gap: 10px;
+    
+          img {
+            object-fit: cover;
+            // box shadow
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+    
+            // transition
+            transition: all 0.20s ease-in-out;
+          }
+    
+          img:hover {
+            transform: scale(1.02);
+            box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.20);
+          }
+    
+          .col1 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+
+            img.img1 {
+              width: 150px;
+              height: 150px;
+            }
+
+            img.img2 {
+              width: 110px;
+              height: 110px;
+            } 
+          }
+    
+          .col2, .col3 {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+    
+            img.img1 {
+              width: 110px;
+              height: 110px;
+            }
+    
+            img.img2 {
+              width: 110px;
+              height: 110px;
+            }
+          }
+
+          .col3 {
+            img.img1 {
+              width: 95px;
+              height: 95px;
+            }
+
+            img.img2 {
+              width: 95px;
+              height: 95px;
+            }
+          }
+        }
+      }
+
+      @media (min-width: $breakpoint-md) {
+        .show-md {
+          display: none;
+        }
+      }
+
+      @media (max-width: $breakpoint-md) {
+        .hidden-md {
+          display: none;
+        }
+
+        .show-md {
+          display: block;
+        }
+
+        .rows {
+          flex-direction: column;
+          gap: 20px;
+    
+          .text {
+            text-align: center;
+          }
+    
+          .images {
+            gap: 5px;
+    
+            .col1 {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-end;
+              gap: 5px;
+
+              img.img1 {
+                width: 100px;
+                height: 100px;
+              }
+
+              img.img2 {
+                width: 80px;
+                height: 80px;
+              } 
+            }
+    
+            .col2, .col3 {
+              display: flex;
+              flex-direction: column;
+              gap: 5px;
+    
+              img.img1 {
+                width: 80px;
+                height: 80px;
+              }
+    
+              img.img2 {
+                width: 80px;
+                height: 80px;
+              }
+            }
+
+            .col3 {
+              img.img1 {
+                width: 70px;
+                height: 70px;
+              }
+
+              img.img2 {
+                width: 70px;
+                height: 70px;
+              }
+            }
+          }
+        }
+      }
+    }
 </style>
