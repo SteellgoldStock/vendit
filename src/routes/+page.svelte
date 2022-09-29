@@ -1,5 +1,6 @@
 <script lang="ts">
-  import { SearchBar } from "$lib/components/elements/search-bar";
+  import Button from "$lib/components/elements/button/button.svelte";
+import { SearchBar } from "$lib/components/elements/search-bar";
   import { Separator } from "$lib/components/elements/separator";
   import { Tag } from "$lib/components/elements/tag";
 </script>
@@ -16,9 +17,9 @@
   <div class="subject">
     Find your favorite PocketMine plugin sellers here
   </div>
-  
-  <br>
 
+  <br>
+  
   <SearchBar placeholder="Search for a plugin" />
 </div>
 
@@ -29,6 +30,15 @@
     <div class="text">
       <h2>Sellers</h2>
       <p>Find your favorite PocketMine plugin sellers here</p>
+      
+      <div class="button">
+        <Button buttonInfo={{
+          type: "link",
+          text: "See more sellers",
+          icon: "fa-solid fa-plus",
+          href: "#"
+        }} />
+      </div>
     </div>
     <div class="images">
       <div class="col1">
@@ -39,7 +49,7 @@
         <img class="img2" src="https://cdn.discordapp.com/avatars/371298344921726978/2e12f0a06b95725bf492c1a22e43b4b6.png?size=256" height="100px" alt="Loupio">
       </div>
       <div class="col3">
-          <img class="img1" src="https://cdn.discordapp.com/avatars/504392983244832780/ed108638e6cba46a3498bc6da92158f6.webp?size=256" height="90px" alt="Gaëtan">
+        <img class="img1" src="https://cdn.discordapp.com/avatars/504392983244832780/ed108638e6cba46a3498bc6da92158f6.webp?size=256" height="90px" alt="Gaëtan">
         <img class="img2" src="https://cdn.discordapp.com/avatars/162633729703936001/c68325b9d4509bcd7e4a56a32dd6ff30.png?size=256" height="100px" alt="King">
       </div>
     </div>
@@ -86,7 +96,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px 20px;
+    padding: 20px 20px;
     background: $primary;
     color: $white;
 
@@ -119,7 +129,7 @@
 
       padding: 50px 20px;
       margin: 0 auto;
-      max-width: 1200px;
+      max-width: 1100px;
 
       .text {
         h2 {
@@ -134,6 +144,10 @@
           font-weight: 500;
           margin: 0;
           color: $white-600;
+        }
+
+        .button {
+          margin-top: 20px;
         }
       }
 
@@ -247,7 +261,7 @@
     
         padding: 50px 20px;
         margin: 0 auto;
-        max-width: 1200px;
+        max-width: 1100px;
     
         .text {
           h2 {
