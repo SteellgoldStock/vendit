@@ -105,7 +105,7 @@ import Tag from "$lib/components/elements/tag/tag.svelte";
 
   .sellers {
     margin-top: -8px;
-    background: linear-gradient(180deg, #2B324E 35.24%, rgba(58, 70, 118, 0.9) 100%);
+    background: linear-gradient(253.27deg, #2B324E 16.67%, rgba(58, 70, 118, 0.9) 47.32%);
 
     .rows {
       display: flex;
@@ -233,7 +233,7 @@ import Tag from "$lib/components/elements/tag/tag.svelte";
 
   .products {
       margin-top: -8px;
-      background: linear-gradient(180deg, #2B324E 35.24%, rgba(58, 70, 118, 0.9) 100%);
+      background: linear-gradient(91.69deg, #2E3554 23.05%, #37426E 75.09%);
     
       .rows {
         display: flex;
