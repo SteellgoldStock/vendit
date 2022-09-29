@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Tag from "$lib/components/elements/tag/tag.svelte";
+  import Separator from "$lib/components/elements/separator/separator.svelte";
+import Tag from "$lib/components/elements/tag/tag.svelte";
 </script>
 
 <svelte:head>
@@ -16,7 +17,7 @@
   </div>
 </div>
 
-<hr class="separator">
+<Separator />
 
 <div class="sellers">
   <div class="rows">
@@ -39,7 +40,7 @@
     </div>
   </div>
 
-  <hr class="separator">
+  <Separator />
 </div>
 
 <style lang="scss">
@@ -199,11 +200,5 @@
         }
       }
     }
-  }
-
-  .separator {
-    border: 0;
-    height: 5px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.30), rgba(0, 0, 0, 0));
   }
 </style>
