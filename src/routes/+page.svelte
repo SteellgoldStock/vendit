@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Image } from "$lib/components/elements/image";
   import Tag from "$lib/components/elements/tag/tag.svelte";
 </script>
 
@@ -27,15 +26,15 @@
     </div>
     <div class="images">
       <div class="col1">
-        <img src="https://cdn.discordapp.com/avatars/504392983244832780/ed108638e6cba46a3498bc6da92158f6.webp?size=256" height="150px"alt="Gaëtan">
+        <img class="img1" src="https://cdn.discordapp.com/avatars/504392983244832780/ed108638e6cba46a3498bc6da92158f6.webp?size=256" height="150px"alt="Gaëtan">
       </div>
       <div class="col2">
-        <img src="https://cdn.discordapp.com/avatars/533306853317279773/6eac2d06855a52de73bc48343a00a2c1.png?size=256" height="100px" alt="Romain">
-        <img src="https://cdn.discordapp.com/avatars/371298344921726978/2e12f0a06b95725bf492c1a22e43b4b6.png?size=256" height="100px" alt="Loupio">
+        <img class="img1" src="https://cdn.discordapp.com/avatars/533306853317279773/6eac2d06855a52de73bc48343a00a2c1.png?size=256" height="100px" alt="Romain">
+        <img class="img2" src="https://cdn.discordapp.com/avatars/371298344921726978/2e12f0a06b95725bf492c1a22e43b4b6.png?size=256" height="100px" alt="Loupio">
       </div>
       <div class="col3">
-        <img src="https://cdn.discordapp.com/avatars/233351173665456129/a_cee03ee0f97ee3c550840d584bc55c21.png?size=256" height="90px" alt="Bluzzi">
-        <img src="https://cdn.discordapp.com/avatars/162633729703936001/c68325b9d4509bcd7e4a56a32dd6ff30.png?size=256" height="100px" alt="King">
+        <img class="img1" src="https://cdn.discordapp.com/avatars/233351173665456129/a_cee03ee0f97ee3c550840d584bc55c21.png?size=256" height="90px" alt="Bluzzi">
+        <img class="img2" src="https://cdn.discordapp.com/avatars/162633729703936001/c68325b9d4509bcd7e4a56a32dd6ff30.png?size=256" height="100px" alt="King">
       </div>
     </div>
   </div>
@@ -105,12 +104,34 @@
 
       .images {
         display: flex;
-        flex-direction: column;
-        gap: 20px;
+        gap: 10px;
 
         img {
-          border-radius: 10px;
+          border-radius: 15px;
           object-fit: cover;
+        }
+
+        .col2, .col3 {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          img.img1 {
+            width: 100px;
+            height: 100px;
+          }
+
+          img.img2 {
+            width: 100px;
+            height: 100px;
+          }
+        }
+
+        .col3 {
+          img.img1 {
+            width: 90px;
+            height: 90px;
+          }
         }
       }
     }
