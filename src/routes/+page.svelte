@@ -3,6 +3,10 @@
   import Tag from "$lib/components/elements/tag/tag.svelte";
 </script>
 
+<svelte:head>
+  <title>Vendit ・ Homepage</title>
+</svelte:head>
+
 <div class="header">
   <div class="title">
     <h1 class="title">VENDIT</h1>
