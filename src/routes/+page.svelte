@@ -54,9 +54,9 @@ import { SearchBar } from "$lib/components/elements/search-bar";
       </div>
     </div>
   </div>
-
-  <Separator />
 </div>
+
+<Separator />
 
 <div class="products">
   <div class="rows">
@@ -83,8 +83,6 @@ import { SearchBar } from "$lib/components/elements/search-bar";
       <p>There are so many, add yours?<br>and be among the pinned!</p>
     </div>
   </div>
-
-  <Separator />
 </div>
 
 <style lang="scss">
@@ -120,6 +118,8 @@ import { SearchBar } from "$lib/components/elements/search-bar";
 
   .sellers {
     margin-top: -8px;
+    margin-bottom: -8px;
+    padding: 50px;
     background: linear-gradient(253.27deg, #2B324E 16.67%, rgba(58, 70, 118, 0.9) 47.32%);
 
     .rows {
@@ -129,25 +129,25 @@ import { SearchBar } from "$lib/components/elements/search-bar";
 
       padding: 50px 20px;
       margin: 0 auto;
-      max-width: 1100px;
+      max-width: 1200px;
 
       .text {
         h2 {
-          font-size: 2rem;
+          font-size: 3rem;
           font-weight: 900;
           margin: 0;
           color: $white;
         }
 
         p {
-          font-size: 1.2rem;
+          font-size: 1.4rem;
           font-weight: 500;
           margin: 0;
           color: $white-600;
         }
 
         .button {
-          margin-top: 20px;
+          margin-top: 30px;
         }
       }
 
@@ -158,10 +158,7 @@ import { SearchBar } from "$lib/components/elements/search-bar";
         img {
           border-radius: 15px;
           object-fit: cover;
-          // box shadow
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
-
-          // transition
           transition: all 0.20s ease-in-out;
         }
 
@@ -171,8 +168,8 @@ import { SearchBar } from "$lib/components/elements/search-bar";
 
         .col1 {
           img {
-            width: 150px;
-            height: 150px;
+            width: 190px;
+            height: 190px;
           }
         }
 
@@ -182,20 +179,20 @@ import { SearchBar } from "$lib/components/elements/search-bar";
           gap: 10px;
 
           img.img1 {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
           }
 
           img.img2 {
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
           }
         }
 
         .col3 {
           img.img1 {
-            width: 90px;
-            height: 90px;
+            width: 120px;
+            height: 120px;
           }
         }
       }
@@ -250,170 +247,169 @@ import { SearchBar } from "$lib/components/elements/search-bar";
   }
 
   .products {
-      margin-top: -8px;
-      background: linear-gradient(91.69deg, #2E3554 23.05%, #37426E 75.09%);
+    margin-top: -8px;
+    margin-bottom: -8px;
+    padding: 50px;
+    background: linear-gradient(91.69deg, #2E3554 23.05%, #37426E 75.09%);
     
-      .rows {
+    .rows {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    
+      padding: 50px 20px;
+      margin: 0 auto;
+      max-width: 1200px;
+    
+      .text {
+        h2 {
+          font-size: 3rem;
+          font-weight: 900;
+          margin: 0;
+          color: $white;
+        }
+    
+        p {
+          font-size: 1.4rem;
+          font-weight: 500;
+          margin: 0;
+          color: $white-600;
+        }
+      }
+    
+      .images {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        gap: 10px;
     
-        padding: 50px 20px;
-        margin: 0 auto;
-        max-width: 1100px;
+        img {
+          object-fit: cover;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+          transition: all 0.20s ease-in-out;
+        }
+    
+        img:hover {
+          transform: scale(1.02);
+        }
+    
+        .col1 {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          gap: 10px;
+
+          img.img1 {
+            width: 150px;
+            height: 150px;
+          }
+
+          img.img2 {
+            width: 110px;
+            height: 110px;
+          } 
+        }
+    
+        .col2, .col3 {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+    
+          img.img1 {
+            width: 110px;
+            height: 110px;
+          }
+    
+          img.img2 {
+            width: 110px;
+            height: 110px;
+          }
+        }
+
+        .col3 {
+          img.img1 {
+            width: 95px;
+            height: 95px;
+          }
+
+          img.img2 {
+            width: 95px;
+            height: 95px;
+          }
+        }
+      }
+    }
+
+    @media (min-width: $breakpoint-md) {
+      .show-md {
+        display: none;
+      }
+    }
+
+    @media (max-width: $breakpoint-md) {
+      .hidden-md {
+        display: none;
+      }
+
+      .show-md {
+        display: block;
+      }
+
+      .rows {
+        flex-direction: column;
+        gap: 20px;
     
         .text {
-          h2 {
-            font-size: 2rem;
-            font-weight: 900;
-            margin: 0;
-            color: $white;
-          }
-    
-          p {
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin: 0;
-            color: $white-600;
-          }
+          text-align: center;
         }
     
         .images {
-          display: flex;
-          gap: 10px;
-    
-          img {
-            object-fit: cover;
-            // box shadow
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
-    
-            // transition
-            transition: all 0.20s ease-in-out;
-          }
-    
-          img:hover {
-            transform: scale(1.02);
-          }
+          gap: 5px;
     
           .col1 {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            gap: 10px;
+            gap: 5px;
 
             img.img1 {
-              width: 150px;
-              height: 150px;
+              width: 100px;
+              height: 100px;
             }
 
             img.img2 {
-              width: 110px;
-              height: 110px;
+              width: 80px;
+              height: 80px;
             } 
           }
     
           .col2, .col3 {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 5px;
     
             img.img1 {
-              width: 110px;
-              height: 110px;
+              width: 80px;
+              height: 80px;
             }
     
             img.img2 {
-              width: 110px;
-              height: 110px;
+              width: 80px;
+              height: 80px;
             }
           }
 
           .col3 {
             img.img1 {
-              width: 95px;
-              height: 95px;
+              width: 70px;
+              height: 70px;
             }
 
             img.img2 {
-              width: 95px;
-              height: 95px;
-            }
-          }
-        }
-      }
-
-      @media (min-width: $breakpoint-md) {
-        .show-md {
-          display: none;
-        }
-      }
-
-      @media (max-width: $breakpoint-md) {
-        .hidden-md {
-          display: none;
-        }
-
-        .show-md {
-          display: block;
-        }
-
-        .rows {
-          flex-direction: column;
-          gap: 20px;
-    
-          .text {
-            text-align: center;
-          }
-    
-          .images {
-            gap: 5px;
-    
-            .col1 {
-              display: flex;
-              flex-direction: column;
-              align-items: flex-end;
-              gap: 5px;
-
-              img.img1 {
-                width: 100px;
-                height: 100px;
-              }
-
-              img.img2 {
-                width: 80px;
-                height: 80px;
-              } 
-            }
-    
-            .col2, .col3 {
-              display: flex;
-              flex-direction: column;
-              gap: 5px;
-    
-              img.img1 {
-                width: 80px;
-                height: 80px;
-              }
-    
-              img.img2 {
-                width: 80px;
-                height: 80px;
-              }
-            }
-
-            .col3 {
-              img.img1 {
-                width: 70px;
-                height: 70px;
-              }
-
-              img.img2 {
-                width: 70px;
-                height: 70px;
-              }
+              width: 70px;
+              height: 70px;
             }
           }
         }
       }
     }
+  }
 </style>
