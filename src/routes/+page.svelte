@@ -167,7 +167,6 @@ import { SearchBar } from "$lib/components/elements/search-bar";
 
         img:hover {
           transform: scale(1.02);
-          box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.20);
         }
 
         .col1 {
@@ -294,7 +293,6 @@ import { SearchBar } from "$lib/components/elements/search-bar";
     
           img:hover {
             transform: scale(1.02);
-            box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.20);
           }
     
           .col1 {

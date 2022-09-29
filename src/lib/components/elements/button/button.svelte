@@ -31,7 +31,7 @@
     background-color: #3D486B;
     color: #fff;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 15px;
     text-decoration: none;
     border: solid 3px rgb(77, 88, 133);
   }
