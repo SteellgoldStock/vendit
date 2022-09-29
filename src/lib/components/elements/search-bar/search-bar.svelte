@@ -37,9 +37,8 @@
 
   .search-bar {
     display: flex;
-    align-items: center;
     justify-content: center;
-
+    
     input {
       background-color: #3D486B;
       outline: none;
@@ -60,6 +59,7 @@
       border: none;
       cursor: pointer;
       border-radius: 0 20px 20px 0;
+      border: solid 5px #414D74;
       color: $white;
       background-color: #414D74;
       padding: 10px;
