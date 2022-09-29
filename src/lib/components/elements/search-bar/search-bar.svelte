@@ -9,6 +9,7 @@
   {:else}
     <input type="text" placeholder={placeholder} />
   {/if}
+  
   <div class="button">
     <button>
       <svg 
@@ -37,34 +38,41 @@
   .search-bar {
     display: flex;
     align-items: center;
+    justify-content: center;
+
+    input {
+      background-color: #3D486B;
+      outline: none;
+      border: solid 5px #414D74;
+      padding: 10px 15px;
+      width: 100%;
+      font-size: 1rem;
+      color: rgba($color: #ffffff, $alpha: 50%);
+      border-radius: 20px 0 0 20px;
+
+      &::placeholder {
+        color: rgba($color: #ffffff, $alpha: 20%);
+      }
+    }
 
     button {
       background: #414D74;
       border: none;
-      padding: 8.65px;
-      margin: 0;
       cursor: pointer;
       border-radius: 0 20px 20px 0;
       color: $white;
+      background-color: #414D74;
+      padding: 10px;
+      outline: none;
+      transition: background-color 0.2s ease-in-out;
 
       svg {
         margin-right: 5px;
       }
-    }
-  }
 
-  input {
-    background-color: #3D486B;
-    outline: none;
-    border: solid 5px #414D74;
-    padding: 0.5rem 1rem;
-    width: 100%;
-    font-size: 1rem;
-    color: rgba($color: #ffffff, $alpha: 50%);
-    border-radius: 20px 0 0 20px;
-
-    &::placeholder {
-      color: rgba($color: #ffffff, $alpha: 20%);
+      &:hover {
+        background-color: #3D486B;
+      }
     }
   }
 </style>

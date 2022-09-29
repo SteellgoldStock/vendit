@@ -27,11 +27,14 @@
 {/if}
 
 <style lang="scss">
+  @import "../../../scss/colors.scss";
+  @import "../../../scss/variables.scss";
+
   .button {
     background-color: #3D486B;
     color: #fff;
     padding: 10px 20px;
-    border-radius: 15px;
+    border-radius: $button-radius;
     text-decoration: none;
     border: solid 3px rgb(77, 88, 133);
   }
