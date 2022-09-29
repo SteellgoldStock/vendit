@@ -135,6 +135,53 @@
         }
       }
     }
+
+    @media (max-width: $breakpoint-md) {
+      .rows {
+        flex-direction: column;
+        gap: 20px;
+
+        .text {
+          text-align: center;
+        }
+
+        .images {
+          gap: 5px;
+
+          img {
+            border-radius: 10px;
+          }
+
+          .col1 {
+            img {
+              width: 130px;
+              height: 130px;
+            }
+          }
+
+          .col2, .col3 {
+            gap: 5px;
+
+            img.img1 {
+              width: 70px;
+              height: 70px;
+            }
+
+            img.img2 {
+              width: 70px;
+              height: 70px;
+            }
+          }
+
+          .col3 {
+            img.img1 {
+              width: 65px;
+              height: 65px;
+            }
+          }
+        }
+      }
+    }
   }
 
   .separator {
