@@ -109,6 +109,23 @@
         img {
           border-radius: 15px;
           object-fit: cover;
+          // box shadow
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+
+          // transition
+          transition: all 0.20s ease-in-out;
+        }
+
+        img:hover {
+          transform: scale(1.02);
+          box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.20);
+        }
+
+        .col1 {
+          img {
+            width: 150px;
+            height: 150px;
+          }
         }
 
         .col2, .col3 {
