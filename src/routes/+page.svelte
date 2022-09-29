@@ -12,7 +12,6 @@ import { SearchBar } from "$lib/components/elements/search-bar";
 <div class="header">
   <div class="title">
     <h1 class="title">VENDIT</h1>
-    <Tag text="BETA" type="special" />
   </div>
   <div class="subject">
     Find your favorite PocketMine plugin sellers here
@@ -94,7 +93,7 @@ import { SearchBar } from "$lib/components/elements/search-bar";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 20px;
+    padding: 30px 20px;
     background: $primary;
     color: $white;
 
