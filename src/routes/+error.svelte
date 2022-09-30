@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores';
+  import { Button } from '$lib/components/elements/button';
 
   let status: number = $page.status;
   let message: string = "";
@@ -51,6 +52,15 @@
 <div class="error">
   <h1>{status}</h1>
   <p>{message}</p>
+  
+  <div class="button">
+    <Button buttonInfo={{
+      type: "link",
+      text: "Go back to homepage",
+      icon: "fa-solid fa-arrow-left",
+      href: "/"
+    }} />
+  </div>
 </div>
 
 <style lang="scss">
@@ -78,6 +88,11 @@
       font-weight: 400;
       margin: 0;
       color: white;
+    }
+
+    .button {
+      margin-top: 40px;
+      padding: 10px;
     }
   }
 </style>
