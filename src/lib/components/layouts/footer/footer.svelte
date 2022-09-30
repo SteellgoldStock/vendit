@@ -23,6 +23,8 @@
 </footer>
 
 <style lang="scss">
+    @import "../../../scss/variables.scss";
+
     footer {
       display: flex;
       justify-content: center;
@@ -31,9 +33,11 @@
       background-color: #2D3555;
       color: #fff;
       margin-top: -8px;
+      height: $height-footer;
 
       .text {
         width: 80%;
+        
         p {
           width: 70%;
         }

@@ -26,7 +26,7 @@
     align-items: center;
     background: $background;
 
-    height: 70px;
+    height: $height-navbar;
     padding: 0px 30px;
 
     i {

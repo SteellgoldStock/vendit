@@ -79,7 +79,7 @@
     height: 100%;
     text-align: center;
     padding: 10px;
-    min-height: 53vh;
+    min-height: calc(100vh - #{$height-footer});
 
     @media (max-width: $breakpoint-md) {
       min-height: 40vh;
