@@ -3,6 +3,10 @@
   import { Separator } from "$lib/components/elements/separator";
 </script>
 
+<svelte:head>
+  <title>Vendit ・ About</title>
+</svelte:head>
+
 <div class="header">
   <div class="title">
     <h1 class="title">ABOUT VENDIT</h1>
@@ -15,10 +19,13 @@
 <Separator />
 
 <section class="faq">
-  <Accordion active={true}>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  <Accordion active={false} title="How much does it cost?">
+    It's free, we only take a 5% transaction fee for each payment you receive
   </Accordion>
-  <Accordion active={false} title="How to buy plugins on Vendit" />
+  <Accordion active={true} title="How does it work? ">
+    When you will put a plugin online, you will define its price, once a person will buy it the transaction will be paid on your PayPal account in the following minutes,
+    <br>The user will receive a link by email address to access the download page on which he can download the plugin only <strong>once</strong>.
+  </Accordion>
 </section>
 
 <style lang="scss">

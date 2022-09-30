@@ -49,6 +49,10 @@
   $: message = statusText[status] || "Unknown Error";
 </script>
 
+<svelte:head>
+  <title>Vendit ・ Error {status}</title>
+</svelte:head>
+
 <div class="error">
   <h1>{status}</h1>
   <p>{message}</p>
@@ -75,16 +79,21 @@
     height: 100%;
     text-align: center;
     padding: 10px;
+    min-height: 53vh;
+
+    @media (max-width: $breakpoint-md) {
+      min-height: 40vh;
+    }
 
     h1 {
-      font-size: 4rem;
+      font-size: 7rem;
       font-weight: 900;
       margin: 0;
       color: white;
     }
 
     p {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       font-weight: 400;
       margin: 0;
       color: white;

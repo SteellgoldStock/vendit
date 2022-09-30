@@ -8,7 +8,7 @@
   </div>
 
   <div class="links" class:active={!active}>
-    <a href="/">Discorver</a>
+    <a href="/about">About</a>
     <a href="/">Contact</a>
     <a href="/" class="button">Dashboard</a>
   </div>
