@@ -1,6 +1,6 @@
 <script lang="ts">
   import Button from "$lib/components/elements/button/button.svelte";
-import { SearchBar } from "$lib/components/elements/search-bar";
+  import { SearchBar } from "$lib/components/elements/search-bar";
   import { Separator } from "$lib/components/elements/separator";
   import { Tag } from "$lib/components/elements/tag";
 </script>
