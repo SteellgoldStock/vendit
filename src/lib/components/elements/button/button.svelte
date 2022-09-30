@@ -10,19 +10,19 @@
 
   let icon: string;
   if (buttonInfo.icon) {
-    icon = `<i style="margin-left: 10px;" class="${buttonInfo.icon}"></i>`;
+    icon = `<i style="margin-right: 10px;" class="${buttonInfo.icon}"></i>`;
   }
 </script>
 
 {#if buttonInfo.type === "button"}
   <button class="button">
-    {buttonInfo.text}
     {@html icon ?? ""}
+    {buttonInfo.text}
   </button>
 {:else if buttonInfo.type === "link"}
   <a href={buttonInfo.href} class="button">
-    {buttonInfo.text}
     {@html icon ?? ""}
+    {buttonInfo.text}
   </a>
 {/if}
 
