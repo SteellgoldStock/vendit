@@ -48,7 +48,7 @@
         <img class="img2" src="https://cdn.discordapp.com/avatars/371298344921726978/2e12f0a06b95725bf492c1a22e43b4b6.png?size=256" height="100px" alt="Loupio">
       </div>
       <div class="col3">
-        <img class="img1" src="https://cdn.discordapp.com/avatars/504392983244832780/ed108638e6cba46a3498bc6da92158f6.webp?size=256" height="90px" alt="Gaëtan">
+        <img class="img1" src="https://cdn.discordapp.com/avatars/504392983244832780/9ff08250c46bfd775c5b30a73e1a48a8.webp?size=256" height="90px" alt="Gaëtan">
         <img class="img2" src="https://cdn.discordapp.com/avatars/162633729703936001/c68325b9d4509bcd7e4a56a32dd6ff30.png?size=256" height="100px" alt="King">
       </div>
     </div>
