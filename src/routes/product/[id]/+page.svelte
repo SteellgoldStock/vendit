@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Button } from "$lib/components/elements/button";
+    import { Separator } from "$lib/components/elements/separator";
   import { Stars } from "$lib/components/elements/stars";
     import { destroy_component } from "svelte/internal";
 
@@ -109,7 +110,56 @@
         </div>
         <p class="description">{@html product.description}</p>
       </div>
+
+      <div class="actions">
+        <Button buttonInfo={{
+          text: "Buy now",
+          type: "button",
+          icon: "fa-brands fa-paypal"
+        }} />
+
+        <Button buttonInfo={{
+          text: "Add to cart",
+          type: "button",
+          icon: "fa-solid fa-shopping-cart",
+          href: "/cart"
+        }} />
+
+        <Button buttonInfo={{
+          text: "Add to wishlist",
+          type: "button",
+          icon: "fa-solid fa-heart"
+        }} />
+
+        <Button buttonInfo={{
+          text: "Report",
+          type: "button",
+          color: "red",
+          icon: "fa-solid fa-flag"
+        }} />
+      </div>
     </div>
+  </div>
+</section>
+
+<br>
+
+<Separator />
+
+<section class="comments">
+  <h1 class="title">Comments</h1>
+  <div class="comments-list">
+    {#each product.comments as comment}
+      <div class="comment">
+        <div class="note">
+          <Stars note={comment.rating} />
+        </div>
+        <div class="infos">
+          <h1 class="name">{comment.name}</h1>
+          <p class="comment">{@html comment.comment}</p>
+        </div>
+      </div>
+    {/each}
   </div>
 </section>
 
@@ -137,7 +187,6 @@
           flex-direction: row;
           gap: 10px;
           padding: 10px 0;
-          // max per line
           max-width: 500px;
           overflow-x: auto;
 
@@ -183,7 +232,23 @@
             }
           }
         }
+
+        .actions {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          margin-top: 20px;
+        }
       }
+    }
+  }
+
+  .comments {
+    h1.title {
+      font-size: 2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: white;
     }
   }
 </style>
