@@ -15,6 +15,7 @@
       name: string;
       comment: string;
       rating: number;
+      avatarURL: string;
     }[];
   }
 
@@ -37,40 +38,22 @@
     ],
 
     comments: [{
-      name: "John Doe",
+      name: "Bluzzi",
       comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-      rating: 4.5,
-    },
-    {
-      name: "John Doe",
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-      rating: 5,
-    },
-    {
-      name: "John Doe",
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-      rating: 3,
-    },
-    {
-      name: "John Doe",
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-      rating: 4,
-    },
-    {
-      name: "John Doe",
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-      rating: 4.5,
-    },
-    {
-      name: "John Doe",
+      rating: 3.5,
+      avatarURL: "https://cdn.discordapp.com/avatars/233351173665456129/a_cee03ee0f97ee3c550840d584bc55c21.gif?size=256"
+    }, {
+      name: "Gaëtan",
       comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
       rating: 5,
-    },
-    {
-      name: "John Doe",
+      avatarURL: "https://cdn.discordapp.com/avatars/504392983244832780/9ff08250c46bfd775c5b30a73e1a48a8.png?size=256"
+    }, {
+      name: "Romain",
       comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
-      rating: 3,
-    }],
+      rating: 1,
+      avatarURL: "https://cdn.discordapp.com/avatars/533306853317279773/6eac2d06855a52de73bc48343a00a2c1.png?size=256"
+    }
+  ]
   };
 
   // global note from all comments
@@ -155,17 +138,19 @@
 
 <Separator />
 
+<br>
+
 <section class="comments">
-  <h1 class="title">Comments</h1>
   <div class="comments-list">
     {#each product.comments as comment}
       <div class="comment">
-        <div class="note">
-          <Stars note={comment.rating} showNote={true} />
-        </div>
+        <img src={comment.avatarURL} alt="{comment.name} Avatar">
         <div class="infos">
-          <h1 class="name">{comment.name}</h1>
-          <p class="comment">{@html comment.comment}</p>
+          <div class="header">
+            <h1 class="title">{comment.name}</h1>
+            <Stars note={comment.rating} />
+          </div>
+          <p class="description">{@html comment.comment}</p>
         </div>
       </div>
     {/each}
@@ -280,11 +265,49 @@
   }
 
   .comments {
-    h1.title {
-      font-size: 2rem;
-      font-weight: 900;
-      text-transform: uppercase;
-      color: white;
+    .comments-list {
+      // 2 comments per row
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 80%;
+      margin: 0 auto;
+      
+      .comment {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+
+        img {
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 100px;
+        }
+
+        .infos {
+          color: $white;
+
+          .header {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+
+            .title {
+              font-size: 1.5rem;
+              font-weight: 900;
+              text-transform: uppercase;
+            }
+          }
+
+          p {
+            font-size: 1rem;
+            font-weight: 300;
+            margin-top: -10px;
+          }
+        }
+      }
     }
   }
 </style>
