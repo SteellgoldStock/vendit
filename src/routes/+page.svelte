@@ -61,7 +61,7 @@
   <div class="rows">
     <div class="show-md text">
       <h2>{ getLang().homepage.plugins_title }</h2>
-      <p>{ getLang().homepage.plugins_subtitle }</p>
+      <p>{ @html getLang().homepage.plugins_subtitle }</p>
     </div>
     <div class="images">
       <div class="col1">
