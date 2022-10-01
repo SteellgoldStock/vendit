@@ -9,7 +9,6 @@
     description: string;
     price: number;
     seller: string;
-    rating: number;
     images: string[];
 
     comments: {
@@ -22,10 +21,9 @@
   let product: ProductInterface = {
     slug: "product-1",
     name: "Plugin cool",
-    description: "Ceci est un plugin très cool omg",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ipsa nam. Dolorem, aut magni corrupti nemo illum doloribus rerum enim pariatur, aperiam perferendis culpa, quaerat est beatae adipisci reprehenderit necessitatibus saepe ab earum. Quaerat labore neque suscipit aliquid enim quisquam, laudantium quae accusamus beatae cupiditate alias temporibus ipsam nesciunt inventore impedit distinctio, repellat nulla corrupti rerum. Adipisci nemo in consequuntur nesciunt animi temporibus ut beatae eos molestias consectetur incidunt, id saepe, esse facere sequi enim eveniet voluptatum doloribus fuga? Est, vero nisi. Consequatur, sunt, beatae dicta eius nostrum impedit totam, aliquid nulla pariatur quaerat tempora itaque debitis ratione ex in.",
     price: 6,
     seller: "Squash",
-    rating: 4,
     images: [
       "https://media.discordapp.net/attachments/951208784200630392/1018195129531650231/unknown.png",
       "https://media.discordapp.net/attachments/951208784200630392/1018195186465116210/unknown.png",
@@ -41,9 +39,46 @@
     comments: [{
       name: "John Doe",
       comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+      rating: 4.5,
+    },
+    {
+      name: "John Doe",
+      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+      rating: 5,
+    },
+    {
+      name: "John Doe",
+      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+      rating: 3,
+    },
+    {
+      name: "John Doe",
+      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
       rating: 4,
+    },
+    {
+      name: "John Doe",
+      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+      rating: 4.5,
+    },
+    {
+      name: "John Doe",
+      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+      rating: 5,
+    },
+    {
+      name: "John Doe",
+      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+      rating: 3,
     }],
   };
+
+  // global note from all comments
+  let rating: number = 0;
+  product.comments.forEach((comment) => {
+    rating += comment.rating;
+  });
+  rating = parseFloat((rating / product.comments.length).toFixed(1));
 </script>
 
 <svelte:head>
@@ -65,7 +100,7 @@
 
     <div class="row2">
       <div class="note">
-        <Stars note={product.rating} />
+        <Stars note={globalNote} showNote={true} />
       </div>
       <div class="infos">
         <h1 class="title">{product.name}</h1>
