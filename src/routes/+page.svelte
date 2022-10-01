@@ -2,7 +2,7 @@
   import Button from "$lib/components/elements/button/button.svelte";
   import { SearchBar } from "$lib/components/elements/search-bar";
   import { Separator } from "$lib/components/elements/separator";
-  import { Tag } from "$lib/components/elements/tag";
+  import { getLang, params } from "$lib/utils/lang/lang";
 </script>
 
 <svelte:head>
@@ -11,15 +11,15 @@
 
 <div class="header">
   <div class="title">
-    <h1 class="title">VENDIT</h1>
+    <h1 class="title">{ getLang().homepage.header_title }</h1>
   </div>
   <div class="subject">
-    Find your favorite PocketMine plugin sellers here
+    { getLang().homepage.header_subtitle }
   </div>
 
   <br>
   
-  <SearchBar placeholder="Search for a plugin" />
+  <SearchBar placeholder={getLang().homepage.header_searchbar_placeholder } />
 </div>
 
 <Separator />
@@ -27,13 +27,13 @@
 <div class="sellers">
   <div class="rows">
     <div class="text">
-      <h2>Sellers</h2>
-      <p>Find your favorite PocketMine plugin sellers here</p>
+      <h2>{ getLang().homepage.sellers_title }</h2>
+      <p>{ getLang().homepage.sellers_subtitle }</p>
       
       <div class="button">
         <Button buttonInfo={{
           type: "link",
-          text: "See more sellers",
+          text: getLang().homepage.sellers_button,
           icon: "fa-solid fa-plus",
           href: "#"
         }} />
@@ -60,8 +60,8 @@
 <div class="products">
   <div class="rows">
     <div class="show-md text">
-      <h2>Buy or sell your plugins</h2>
-      <p>There are so many, add yours?<br>and be among the pinned!</p>
+      <h2>{ getLang().homepage.plugins_title }</h2>
+      <p>{ getLang().homepage.plugins_subtitle }</p>
     </div>
     <div class="images">
       <div class="col1">
@@ -78,8 +78,8 @@
       </div>
     </div>
     <div class="hidden-md text">
-      <h2>Buy or sell your plugins</h2>
-      <p>There are so many, add yours?<br>and be among the pinned!</p>
+      <h2>{ getLang().homepage.plugins_title }</h2>
+      <p>{ @html getLang().homepage.plugins_subtitle }</p>
     </div>
   </div>
 </div>

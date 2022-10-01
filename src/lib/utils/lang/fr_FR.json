@@ -1,0 +1,14 @@
+{
+  "homepage": {
+    "header_title": "VENDIT",
+    "header_subtitle": "Trouvez vos vendeurs de plugins PocketMine préférés ici !",
+    "header_searchbar_placeholder": "Recherche d'un plugin",
+
+    "sellers_title": "Vendeurs",
+    "sellers_subtitle": "Trouvez les vendeurs de plugins PocketMine les plus populaires ici !",
+    "sellers_button": "Voir plus de vendeurs",
+
+    "plugins_title": "Acheter ou vendez",
+    "plugins_subtitle": "Trouvez les plugins PocketMine les plus populaires ici, <br>ou vendez les vôtres !"
+  }
+}
