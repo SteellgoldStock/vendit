@@ -1,26 +1,78 @@
 <script lang="ts">
-    import { Button } from "$lib/components/elements/button";
-import { Stars } from "$lib/components/elements/stars";
+  import { Button } from "$lib/components/elements/button";
+  import { Stars } from "$lib/components/elements/stars";
+    import { destroy_component } from "svelte/internal";
 
+  interface ProductInterface {
+    slug: string;
+    name: string;
+    description: string;
+    price: number;
+    seller: string;
+    rating: number;
+    images: string[];
 
+    comments: {
+      name: string;
+      comment: string;
+      rating: number;
+    }[];
+  }
+
+  let product: ProductInterface = {
+    slug: "product-1",
+    name: "Plugin cool",
+    description: "Ceci est un plugin très cool omg",
+    price: 6,
+    seller: "Squash",
+    rating: 4,
+    images: [
+      "https://media.discordapp.net/attachments/951208784200630392/1018195129531650231/unknown.png",
+      "https://media.discordapp.net/attachments/951208784200630392/1018195186465116210/unknown.png",
+      "https://media.discordapp.net/attachments/951208784200630392/1018195247215411211/unknown.png",
+      "https://media.discordapp.net/attachments/951208784200630392/1018195336122081310/unknown.png",
+      "https://media.discordapp.net/attachments/951208784200630392/1018195396129992775/unknown.png",
+      "https://media.discordapp.net/attachments/951208784200630392/1018195186465116210/unknown.png",
+      "https://media.discordapp.net/attachments/951208784200630392/1018195247215411211/unknown.png",
+      "https://media.discordapp.net/attachments/951208784200630392/1018195336122081310/unknown.png",
+      "https://media.discordapp.net/attachments/951208784200630392/1018195396129992775/unknown.png"
+    ],
+
+    comments: [{
+      name: "John Doe",
+      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+      rating: 4,
+    }],
+  };
 </script>
+
+<svelte:head>
+  <title>Product ・ {product.name}</title>
+</svelte:head>
 
 <section class="product">
   <div class="rows">
     <div class="row1">
-      <img class="pinned" src="https://media.discordapp.net/attachments/951208784200630392/1018195129531650231/unknown.png?width=756&height=473" height="100px" alt="">
+      <img src={product.images[0]} alt="">
+      <div class="images">
+        {#each product.images as image, i}
+          {#if i > 0}
+            <img src={image} alt={product.name} />
+          {/if}
+        {/each}
+      </div>
     </div>
 
     <div class="row2">
       <div class="note">
-        <Stars note={4.5} />
+        <Stars note={product.rating} />
       </div>
       <div class="infos">
-        <h1 class="title">Market Plugin</h1>
+        <h1 class="title">{product.name}</h1>
         <div class="price">
-          <h2 class="now-price">59.99€</h2>
+          <h2 class="now-price">Selled by {product.seller} for {product.price}€</h2>
         </div>
-        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.        </p>
+        <p class="description">{@html product.description}</p>
       </div>
     </div>
   </div>
@@ -30,13 +82,10 @@ import { Stars } from "$lib/components/elements/stars";
   @import "../../../lib/scss/colors.scss";
   @import "../../../lib/scss/variables.scss";
 
-  .product {
-
+  .product {    
     .rows {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-      padding: 10px;
       gap: 30px;
       width: 80%;
       margin: 0 auto;
@@ -44,8 +93,39 @@ import { Stars } from "$lib/components/elements/stars";
       .row1 {
         img {
           width: 500px;
-          height: 100%;
+          height: 300px;
           object-fit: cover;
+        }
+        
+        .images {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          padding: 10px 0;
+          // max per line
+          max-width: 500px;
+          overflow-x: auto;
+
+          &::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+          }
+
+          &::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px $primary;
+            border-radius: 10px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: $secondary;
+            border-radius: 100px;
+          }
+
+          img {
+            width: 75px;
+            height: 100%;
+            object-fit: cover;
+          }
         }
       }
 
@@ -64,7 +144,6 @@ import { Stars } from "$lib/components/elements/stars";
             .now-price {
               font-size: 1rem;
               font-weight: 500;
-              text-transform: uppercase;
               margin-top: -30px;
             }
           }
