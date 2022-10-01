@@ -143,6 +143,16 @@
 
 <br>
 
+<div class="seller-card">
+  <img src="https://cdn.discordapp.com/avatars/947125111981506601/f5ecce981646f5eaa0cf4c2eed88ca75.png?size=256" alt="{product.seller} Avatar">
+  <div class="infos">
+    <h1 class="title">{product.seller}</h1>
+    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?</p>
+  </div>
+</div>
+
+<br>
+
 <Separator />
 
 <section class="comments">
@@ -151,7 +161,7 @@
     {#each product.comments as comment}
       <div class="comment">
         <div class="note">
-          <Stars note={comment.rating} />
+          <Stars note={comment.rating} showNote={true} />
         </div>
         <div class="infos">
           <h1 class="name">{comment.name}</h1>
@@ -179,6 +189,7 @@
           width: 500px;
           height: 300px;
           object-fit: cover;
+          border-radius: 10px;
         }
         
         .images {
@@ -238,6 +249,32 @@
           gap: 10px;
           margin-top: 20px;
         }
+      }
+    }
+  }
+
+  .seller-card {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+
+    img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 100px;
+    }
+
+    .infos {
+      color: $white;
+
+      .title {
+        font-size: 1.5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-top: 0.20rem;
       }
     }
   }
