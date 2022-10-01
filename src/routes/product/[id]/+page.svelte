@@ -8,7 +8,11 @@
     name: string;
     description: string;
     price: number;
-    seller: string;
+    seller: {
+      name: string;
+      description: string;
+      avatarURL: string;
+    };
     images: string[];
 
     comments: {
@@ -24,7 +28,11 @@
     name: "Plugin cool",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ipsa nam. Dolorem, aut magni corrupti nemo illum doloribus rerum enim pariatur, aperiam perferendis culpa, quaerat est beatae adipisci reprehenderit necessitatibus saepe ab earum. Quaerat labore neque suscipit aliquid enim quisquam, laudantium quae accusamus beatae cupiditate alias temporibus ipsam nesciunt inventore impedit distinctio, repellat nulla corrupti rerum. Adipisci nemo in consequuntur nesciunt animi temporibus ut beatae eos molestias consectetur incidunt, id saepe, esse facere sequi enim eveniet voluptatum doloribus fuga? Est, vero nisi. Consequatur, sunt, beatae dicta eius nostrum impedit totam, aliquid nulla pariatur quaerat tempora itaque debitis ratione ex in.",
     price: 6,
-    seller: "Squash",
+    seller: {
+      name: "Squash",
+      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?",
+      avatarURL: "https://cdn.discordapp.com/avatars/947125111981506601/f5ecce981646f5eaa0cf4c2eed88ca75.png?size=256"
+    },
     images: [
       "https://media.discordapp.net/attachments/951208784200630392/1018195129531650231/unknown.png",
       "https://media.discordapp.net/attachments/951208784200630392/1018195186465116210/unknown.png",
@@ -41,7 +49,7 @@
       name: "Bluzzi",
       comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
       rating: 3.5,
-      avatarURL: "https://cdn.discordapp.com/avatars/233351173665456129/a_cee03ee0f97ee3c550840d584bc55c21.gif?size=256"
+      avatarURL: "https://cdn.discordapp.com/avatars/233351173665456129/a_cee03ee0f97ee3c550840d584bc55c21.png?size=256"
     }, {
       name: "Gaëtan",
       comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
@@ -71,7 +79,7 @@
 <section class="product">
   <div class="rows">
     <div class="row1">
-      <img src={product.images[0]} alt="">
+      <img class="pinned" src={product.images[0]} alt="">
       <div class="images">
         {#each product.images as image, i}
           {#if i > 0}
@@ -88,7 +96,7 @@
       <div class="infos">
         <h1 class="title">{product.name}</h1>
         <div class="price">
-          <h2 class="now-price">Selled by {product.seller} for {product.price}€</h2>
+          <h2 class="now-price">Selled by {product.seller.name} for {product.price}€</h2>
         </div>
         <p class="description">{@html product.description}</p>
       </div>
@@ -127,10 +135,10 @@
 <br>
 
 <div class="seller-card">
-  <img src="https://cdn.discordapp.com/avatars/947125111981506601/f5ecce981646f5eaa0cf4c2eed88ca75.png?size=256" alt="{product.seller} Avatar">
+  <img src={product.seller.avatarURL} alt="{product.seller} Avatar">
   <div class="infos">
-    <h1 class="title">{product.seller}</h1>
-    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?</p>
+    <h1 class="title">{product.seller.name}</h1>
+    <p class="description">{product.seller.description}</p>
   </div>
 </div>
 
@@ -144,13 +152,13 @@
   <div class="comments-list">
     {#each product.comments as comment}
       <div class="comment">
-        <img src={comment.avatarURL} alt="{comment.name} Avatar">
         <div class="infos">
           <div class="header">
+            <img src={comment.avatarURL} alt="{comment.name} Avatar">
             <h1 class="title">{comment.name}</h1>
             <Stars note={comment.rating} />
           </div>
-          <p class="description">{@html comment.comment}</p>
+          <p class="description">{comment.comment}</p>
         </div>
       </div>
     {/each}
@@ -233,6 +241,44 @@
           flex-direction: row;
           gap: 10px;
           margin-top: 20px;
+
+          @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 10px;
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 1000px) {
+      .rows {
+        flex-direction: column;
+        gap: 0;
+
+        .row1 {
+          width: 100%;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          img.pinned {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+          }
+
+          .images {
+            max-width: 100%;
+          }
+        }
+
+        .row2 {
+          width: 100%;
+          margin: 0 auto;
         }
       }
     }
@@ -272,15 +318,15 @@
       gap: 20px;
       width: 80%;
       margin: 0 auto;
-      
+
       .comment {
         display: flex;
         flex-direction: row;
         gap: 20px;
 
         img {
-          width: 100px;
-          height: 100px;
+          width: 50px;
+          height: 50px;
           object-fit: cover;
           border-radius: 100px;
         }
@@ -301,10 +347,31 @@
             }
           }
 
-          p {
+          .description {
             font-size: 1rem;
             font-weight: 300;
-            margin-top: -10px;
+            margin-top: -5px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint-md) {
+      .comments-list {
+        grid-template-columns: repeat(1, 1fr);
+
+        .comment {
+          .infos {
+            .header {
+              .title {
+                font-size: 1rem;
+              }
+            }
+
+            .description {
+              margin-top: 10px;
+              font-size: 0.8rem;
+            }
           }
         }
       }
