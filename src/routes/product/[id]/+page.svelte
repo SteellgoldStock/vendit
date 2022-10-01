@@ -208,6 +208,12 @@
             border-radius: 100px;
           }
 
+          @media (max-width: $breakpoint-md) {
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+
           img {
             width: 75px;
             height: 100%;
