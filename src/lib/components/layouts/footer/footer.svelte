@@ -79,6 +79,7 @@
       footer {
         flex-direction: column;
         padding: 1rem 0;
+        height: $height-footer-mb;
 
         .text {
           width: 100%;
