@@ -19,12 +19,21 @@
 <Separator />
 
 <section class="faq">
-  <Accordion active={false} title="How much does it cost?">
-    It's free, we only take a 5% transaction fee for each payment you receive
+  <Accordion title="How much does it cost?">
+    It's <strong>free</strong>, we only take a 5% transaction fee for each payment you receive
   </Accordion>
-  <Accordion active={true} title="How does it work? ">
+  <Accordion title="How does it work? ">
     When you will put a plugin online, you will define its price, once a person will buy it the transaction will be paid on your PayPal account in the following minutes,
     <br>The user will receive a link by email address to access the download page on which he can download the plugin only <strong>once</strong>.
+  </Accordion>
+  <Accordion title="Is the storage of our plugins secure?">
+    Yes, we use a secure storage system, we do not store your plugins on our servers, we use a CDN (Content Delivery Network) to store your plugins, a CDN is used by many websites such as Google, Facebook, etc, all requests to get a plugin is validated or not by a token, if the token is not valid our refuse the request.
+  </Accordion>
+  <Accordion title="If I decide to delete a plugin from the sales, is it deleted from your servers?">
+    Yes, when you delete a plugin from the sales, it is deleted from our servers, and the download link is no longer valid.
+  </Accordion>
+  <Accordion title="How can I contact you?">
+    You can contact us from the email address, or through the ticket service on the website.
   </Accordion>
 </section>
 
