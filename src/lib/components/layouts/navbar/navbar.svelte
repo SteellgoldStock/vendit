@@ -10,7 +10,7 @@
   <div class="links" class:active={!active}>
     <a href="/about">About</a>
     <a href="/">Contact</a>
-    <a href="/" class="button">Dashboard</a>
+    <a href="/dashboard/login" class="button">Dashboard</a>
   </div>
 
   <i class="fa-solid " class:fa-x={active} class:fa-bars={!active} on:click={() => active = !active}></i>
