@@ -36,6 +36,12 @@
     padding: 10px 20px;
     border-radius: $button-radius;
     text-decoration: none;
-    border: solid 3px rgb(77, 88, 133);
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: all 0.2s ease-in-out;
+  }
+
+  .button:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
   }
 </style>
