@@ -73,20 +73,6 @@
       padding: 50px 20px;
       margin: 0 auto;
       max-width: 1200px;
-
-      .text {
-        h2 {
-          font-size: 3rem;
-          font-weight: 900;
-          margin: 0;
-          color: $white;
-        }
-
-        p {
-          font-size: 1.4rem;
-          color: $white;
-        }
-      }
     }
   }
 </style>

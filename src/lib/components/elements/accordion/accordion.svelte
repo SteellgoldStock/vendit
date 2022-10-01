@@ -41,6 +41,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: $tertiary;
     margin-bottom: 20px;
+    user-select: none;
 
     .header {
       display: flex;
@@ -74,7 +75,7 @@
 
     .content {
       padding: 20px;
-      border-top: 1px solid $white-200;
+      border-top: 1px solid $white-700;
 
       p {
         font-size: 15px;
