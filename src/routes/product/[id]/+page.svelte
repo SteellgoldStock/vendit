@@ -1,8 +1,7 @@
 <script lang="ts">
   import { Button } from "$lib/components/elements/button";
-    import { Separator } from "$lib/components/elements/separator";
+  import { Separator } from "$lib/components/elements/separator";
   import { Stars } from "$lib/components/elements/stars";
-    import { destroy_component } from "svelte/internal";
 
   interface ProductInterface {
     slug: string;
@@ -101,7 +100,7 @@
 
     <div class="row2">
       <div class="note">
-        <Stars note={globalNote} showNote={true} />
+        <Stars note={rating} showNote={true} />
       </div>
       <div class="infos">
         <h1 class="title">{product.name}</h1>
