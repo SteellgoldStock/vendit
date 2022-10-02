@@ -35,6 +35,30 @@
   <Accordion title="How can I contact you?">
     You can contact us from the email address, or through the ticket service on the website.
   </Accordion>
+  <Accordion title="How can I delete my account?">
+    You can delete your account from the settings page, but be careful, once your account is deleted, you will not be able to access your plugins
+    <br>If you are a seller and you have plugins for sale, your seller page will no longer be accessible and your plugins and data will be destroyed
+    <br>You will be able to cancel the deletion by reconnecting within 30 days, after these days, it will be impossible for you to recover your data
+  </Accordion>
+  <Accordion title="If I get scammed, what do I do?">
+    If you get scammed, you can contact us by email or through the ticket service, we will be able to help you.
+    <br><br>
+    <strong>To avoid such cases, here is what we do: </strong>
+    <br>All plugins offered for sale are tested and verified by our team within 24 hours
+    <br>If a plugin is available on the site it means that it works and that it has no problems !
+    <br>If a seller updates the plugin file, it is also checked by our team.
+  </Accordion>
+  <Accordion title="If a seller update a purchased plugin, will I have to pay again?">
+    This question depends on the seller, if the seller when he publishes an update checks the box to send the plugin with its new version to those who have already purchased it, in this case you do not need to pay, you will receive it by mail, or in the dashboard (only one download possible, do not lose it)
+    <br>If not, you'll have to pay again, but you'll be alerted of the plugin update by mail and your dashboard
+  </Accordion>
+  <Accordion title="Can we ask for a refund?">
+    No, otherwise it's too easy to get free plugins, and it's a waste of work for the developer
+  </Accordion>
+  <Accordion title="How do I know it's not a leak?">
+    We systematically check the plugins, if we have any doubts about its origin we refuse it,
+    <br>You can also spread the word, if you think it is one, you can report it on its product page
+  </Accordion>
 </section>
 
 <style lang="scss">
@@ -73,15 +97,5 @@
     margin-bottom: -8px;
     padding: 50px;
     background: linear-gradient(253.27deg, #2B324E 16.67%, rgba(58, 70, 118, 0.9) 47.32%);
-
-    .rows {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      padding: 50px 20px;
-      margin: 0 auto;
-      max-width: 1200px;
-    }
   }
 </style>
