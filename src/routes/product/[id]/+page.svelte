@@ -79,12 +79,9 @@
 <section class="product">
   <div class="rows">
     <div class="row1">
-      <img class="pinned" src={product.images[0]} alt="">
       <div class="images">
         {#each product.images as image, i}
-          {#if i > 0}
-            <img src={image} alt={product.name} />
-          {/if}
+          <img src={image} alt={product.name} />
         {/each}
       </div>
     </div>
@@ -179,8 +176,6 @@
 
       .row1 {
         img {
-          width: 500px;
-          height: 300px;
           object-fit: cover;
           border-radius: 10px;
         }
@@ -208,14 +203,8 @@
             border-radius: 100px;
           }
 
-          @media (max-width: $breakpoint-md) {
-            &::-webkit-scrollbar {
-              display: none;
-            }
-          }
-
           img {
-            width: 75px;
+            width: 500px;
             height: 100%;
             object-fit: cover;
           }
