@@ -105,6 +105,10 @@
           margin-top: -10px;
         }
       }
+
+      @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+      }
     }
   }
 </style>

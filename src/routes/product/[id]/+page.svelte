@@ -241,14 +241,14 @@
           @media (max-width: 768px) {
             flex-direction: column;
             gap: 10px;
-            width: 80%;
+            width: 95%;
             margin: 0 auto;
           }
         }
       }
     }
 
-    @media screen and (max-width: 1000px) {
+    @media (max-width: $breakpoint-md) {
       .rows {
         flex-direction: column;
         gap: 0;
