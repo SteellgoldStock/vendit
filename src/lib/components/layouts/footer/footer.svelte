@@ -1,38 +1,31 @@
-<script lang="ts">
-    import { Separator } from "$lib/components/elements/separator";
-</script>
-
-<Separator />
-
-<footer>
-    <div class="text">
-        <p>Vendit, a plugin selling service for PocketMine-MP software, buy or come and use plugins or share a creation.</p>
+<footer> 
+  <div class="text">
+    <p>Vendit, a plugin selling service for PocketMine-MP software, buy or come and use plugins or share a creation.</p>
+  </div>
+  
+  <div class="social">
+    <div class="logo">
+      <img src="/assets/logos/NavbarIcon.png" alt="NavbarIcon">
     </div>
-
-    <div class="social">
-        <div class="logo">
-            <img src="/assets/logos/NavbarIcon.png" alt="NavbarIcon">
-        </div>
-
-        <div class="icons">
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-github"></i>
-            <i class="fa-brands fa-discord"></i>
-        </div>
+  
+    <div class="icons">
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-github"></i>
+      <i class="fa-brands fa-discord"></i>
     </div>
+  </div>
 </footer>
 
 <style lang="scss">
+    @import "../../../scss/colors.scss";
     @import "../../../scss/variables.scss";
 
     footer {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 2rem 0;
       background-color: #2D3555;
       color: #fff;
-      margin-top: -8px;
       height: $height-footer;
 
       .text {

@@ -73,13 +73,10 @@
 
   .error {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100%;
-    text-align: center;
-    padding: 10px;
-    min-height: calc(100vh - $height-footer);
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - #{$height-navbar} - #{$height-footer});
 
     @media (max-width: $breakpoint-md) {
       min-height: 40vh;
