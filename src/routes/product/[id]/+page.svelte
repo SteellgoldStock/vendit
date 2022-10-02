@@ -315,6 +315,7 @@
       gap: 20px;
       width: 80%;
       margin: 0 auto;
+      padding: 0 0 20px;
     }
 
     @media (max-width: $breakpoint-md) {
