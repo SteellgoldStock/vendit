@@ -35,7 +35,7 @@
     align-items: center;
     background: #495273;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     width: 110px;
     height: 100%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
