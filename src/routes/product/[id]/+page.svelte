@@ -2,6 +2,7 @@
   import { Button } from "$lib/components/elements/button";
   import { Separator } from "$lib/components/elements/separator";
   import { Stars } from "$lib/components/elements/stars";
+  import { Comment } from "$lib/components/elements/product/comment";
 
   interface ProductInterface {
     slug: string;
@@ -17,9 +18,10 @@
 
     comments: {
       name: string;
-      comment: string;
+      text: string;
       rating: number;
       avatarURL: string;
+      date: string;
     }[];
   }
 
@@ -47,19 +49,28 @@
 
     comments: [{
       name: "Bluzzi",
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
       rating: 3.5,
-      avatarURL: "https://cdn.discordapp.com/avatars/233351173665456129/a_cee03ee0f97ee3c550840d584bc55c21.png?size=256"
+      avatarURL: "https://cdn.discordapp.com/avatars/233351173665456129/a_cee03ee0f97ee3c550840d584bc55c21.png?size=256",
+      date: "10/09/2021"
     }, {
       name: "Gaëtan",
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
       rating: 5,
-      avatarURL: "https://cdn.discordapp.com/avatars/504392983244832780/9ff08250c46bfd775c5b30a73e1a48a8.png?size=256"
+      avatarURL: "https://cdn.discordapp.com/avatars/504392983244832780/9ff08250c46bfd775c5b30a73e1a48a8.png?size=256",
+      date: "07/09/2021"
     }, {
       name: "Romain",
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
       rating: 1,
-      avatarURL: "https://cdn.discordapp.com/avatars/533306853317279773/6eac2d06855a52de73bc48343a00a2c1.png?size=256"
+      avatarURL: "https://cdn.discordapp.com/avatars/533306853317279773/6eac2d06855a52de73bc48343a00a2c1.png?size=256",
+      date: "21/09/2021"
+    }, {
+      name: "Loupio",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl. Sed euismod, nunc ut aliquam ultricies, nunc nisl aliquam nisl, eget aliquam nunc nisl sit amet nisl.",
+      rating: 4,
+      avatarURL: "https://cdn.discordapp.com/avatars/371298344921726978/2e12f0a06b95725bf492c1a22e43b4b6.png?size=256",
+      date: "13/09/2021"
     }
   ]
   };
@@ -148,16 +159,7 @@
 <section class="comments">
   <div class="comments-list">
     {#each product.comments as comment}
-      <div class="comment">
-        <div class="infos">
-          <div class="header">
-            <img src={comment.avatarURL} alt="{comment.name} Avatar">
-            <h1 class="title">{comment.name}</h1>
-            <Stars note={comment.rating} />
-          </div>
-          <p class="description">{comment.comment}</p>
-        </div>
-      </div>
+      <Comment comment={comment} />
     {/each}
   </div>
 </section>
@@ -309,46 +311,10 @@
     .comments-list {
       // 2 comments per row
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(1, 1fr);
       gap: 20px;
       width: 80%;
       margin: 0 auto;
-
-      .comment {
-        display: flex;
-        flex-direction: row;
-        gap: 20px;
-
-        img {
-          width: 50px;
-          height: 50px;
-          object-fit: cover;
-          border-radius: 100px;
-        }
-
-        .infos {
-          color: $white;
-
-          .header {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-            align-items: center;
-
-            .title {
-              font-size: 1.5rem;
-              font-weight: 900;
-              text-transform: uppercase;
-            }
-          }
-
-          .description {
-            font-size: 1rem;
-            font-weight: 300;
-            margin-top: -5px;
-          }
-        }
-      }
     }
 
     @media (max-width: $breakpoint-md) {
