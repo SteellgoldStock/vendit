@@ -311,7 +311,7 @@
     .comments-list {
       // 2 comments per row
       display: grid;
-      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
       width: 80%;
       margin: 0 auto;
