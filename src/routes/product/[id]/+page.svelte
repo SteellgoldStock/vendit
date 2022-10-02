@@ -104,6 +104,7 @@
       <div class="infos">
         <h1 class="title">{product.name}</h1>
         <div class="price">
+          <img src={product.seller.avatarURL} width="30px" height="30px" alt=""> 
           <h2 class="now-price">Selled by {product.seller.name} for {product.price}€</h2>
         </div>
         <p class="description">{@html product.description}</p>
@@ -139,16 +140,6 @@
     </div>
   </div>
 </section>
-
-<br>
-
-<div class="seller-card">
-  <img src={product.seller.avatarURL} alt="{product.seller} Avatar">
-  <div class="infos">
-    <h1 class="title">{product.seller.name}</h1>
-    <p class="description">{product.seller.description}</p>
-  </div>
-</div>
 
 <br>
 
@@ -225,10 +216,18 @@
           }
 
           .price {
+            display: flex;
+            align-items: center;
+            margin-top: -30px;
+
+            img {
+              border-radius: 100px;
+              margin-right: 10px;
+            }
+
             .now-price {
               font-size: 1rem;
               font-weight: 500;
-              margin-top: -30px;
             }
           }
         }
@@ -277,32 +276,6 @@
           width: 100%;
           margin: 0 auto;
         }
-      }
-    }
-  }
-
-  .seller-card {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    width: 80%;
-    margin: 0 auto;
-
-    img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border-radius: 100px;
-    }
-
-    .infos {
-      color: $white;
-
-      .title {
-        font-size: 1.5rem;
-        font-weight: 900;
-        text-transform: uppercase;
-        margin-top: 0.20rem;
       }
     }
   }
