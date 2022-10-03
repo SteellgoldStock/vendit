@@ -25,8 +25,16 @@
     justify-content: space-between;
     align-items: center;
     background: $background;
+      height: $height-navbar;
 
-    height: $height-navbar;
+    @media (min-width: $breakpoint-lg) {
+      height: $height-navbar-lg;
+    }
+
+    @media (min-width: $breakpoint-xxl) {
+      height: $height-navbar;
+    }
+
     padding: 0px 30px;
 
     i {
