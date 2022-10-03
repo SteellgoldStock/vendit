@@ -163,7 +163,7 @@
     .rows {
       display: flex;
       flex-direction: row;
-      gap: 30px;
+      gap: $gap-30;
       width: 80%;
       margin: 0 auto;
 
@@ -176,7 +176,7 @@
         .images {
           display: flex;
           flex-direction: row;
-          gap: 10px;
+          gap: $gap-10;
           padding: 10px 0;
           max-width: 500px;
           overflow-x: auto;
@@ -188,7 +188,7 @@
 
           &::-webkit-scrollbar-track {
             box-shadow: inset 0 0 5px $primary;
-            border-radius: 10px;
+            border-radius: $image-radius;
           }
 
           &::-webkit-scrollbar-thumb {
@@ -213,8 +213,8 @@
           color: $white;
 
           .title {
-            font-size: 2rem;
-            font-weight: 900;
+            font-size: $font-size-6;
+            font-weight: $font-weight-7;
             text-transform: uppercase;
             margin-top: 0.20rem;
           }
@@ -225,13 +225,13 @@
             margin-top: -30px;
 
             img {
-              border-radius: 100px;
+              border-radius: $image-radius * 10;
               margin-right: 10px;
             }
 
             .now-price {
-              font-size: 1rem;
-              font-weight: 500;
+              font-size: $font-size-1;
+              font-weight: $font-weight-3;
             }
           }
         }
@@ -239,12 +239,12 @@
         .actions {
           display: flex;
           flex-direction: row;
-          gap: 10px;
+          gap: $gap-10;
           margin-top: 20px;
 
           @media (max-width: 768px) {
             flex-direction: column;
-            gap: 10px;
+            gap: $gap-10;
             width: 95%;
             margin: 0 auto;
           }
@@ -255,14 +255,14 @@
     @media (max-width: $breakpoint-md) {
       .rows {
         flex-direction: column;
-        gap: 25px;
+        gap: $gap-25;
 
         .row1 {
           width: 100%;
           margin: 0 auto;
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: $gap-10;
 
           img.pinned {
             width: 100%;
@@ -289,7 +289,7 @@
       // 2 comments per row
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: $gap-20;
       width: 80%;
       margin: 0 auto;
       padding: 0 0 20px;
@@ -303,13 +303,13 @@
           .infos {
             .header {
               .title {
-                font-size: 1rem;
+                font-size: $font-size-1;
               }
             }
 
             .description {
               margin-top: 10px;
-              font-size: 0.9rem;
+              font-size: $font-size-5-md;
             }
           }
         }

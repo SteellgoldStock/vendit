@@ -93,32 +93,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 20px;
+    padding: $px30;
     background: $primary;
     color: $white;
 
     @media (max-width: $breakpoint-md) {
-      padding: 10px 30px;
+      padding: $px10 $px30;
       text-align: center;
     }
 
     .title {
       h1 {
         font-size: 3rem;
-        font-weight: 900;
+        font-weight: $font-weight-7;
         margin: 0;
       }
 
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: $px20;
     }
   }
 
   .sellers {
     margin-top: -8px;
     margin-bottom: -8px;
-    padding: 50px;
+    padding: $px50;
     background: linear-gradient(253.27deg, #2B324E 16.67%, rgba(58, 70, 118, 0.9) 47.32%);
 
     .rows {
@@ -126,38 +126,38 @@
       justify-content: space-between;
       align-items: center;
 
-      padding: 50px 20px;
+      padding: $px50 $px20;
       margin: 0 auto;
       max-width: 1200px;
 
       .text {
         h2 {
-          font-size: 3rem;
-          font-weight: 900;
+          font-size: $font-size-11;
+          font-weight: $font-weight-7;
           margin: 0;
           color: $white;
         }
 
         p {
           font-size: 1.4rem;
-          font-weight: 500;
+          font-weight: $font-weight-3;
           margin: 0;
           color: $white-600;
         }
 
         .button {
-          margin-top: 30px;
+          margin-top: $px30;
         }
       }
 
       .images {
         display: flex;
-        gap: 10px;
+        gap: $gap-10;
 
         img {
-          border-radius: 15px;
+          border-radius: ($image-radius + 5);
           object-fit: cover;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+          box-shadow: $shadow;
           transition: all 0.20s ease-in-out;
         }
 
@@ -167,31 +167,31 @@
 
         .col1 {
           img {
-            width: 190px;
-            height: 190px;
+            width: ($px100 + 90);
+            height: ($px100 + 90);
           }
         }
 
         .col2, .col3 {
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: $gap-10;
 
           img.img1 {
-            width: 150px;
-            height: 150px;
+            width: ($px100 + 50);
+            height: ($px100 + 50);
           }
 
           img.img2 {
             width: 150px;
-            height: 150px;
+            height: ($px100 + 50);
           }
         }
 
         .col3 {
           img.img1 {
-            width: 120px;
-            height: 120px;
+            width: ($px100 + 20);
+            height: ($px100 + 20);
           }
         }
       }
@@ -200,44 +200,44 @@
     @media (max-width: $breakpoint-md) {
       .rows {
         flex-direction: column;
-        gap: 20px;
+        gap: $gap-20;
 
         .text {
           text-align: center;
         }
 
         .images {
-          gap: 5px;
+          gap: $gap-5;
 
           img {
-            border-radius: 10px;
+            border-radius: $image-radius;
           }
 
           .col1 {
             img {
-              width: 130px;
-              height: 130px;
+              width: ($px100 + 30);
+              height: ($px100 + 30);
             }
           }
 
           .col2, .col3 {
-            gap: 5px;
+            gap: $gap-5;
 
             img.img1 {
-              width: 70px;
-              height: 70px;
+              width: $px70;
+              height: $px70;
             }
 
             img.img2 {
-              width: 70px;
-              height: 70px;
+              width: $px70;
+              height: $px70;
             }
           }
 
           .col3 {
             img.img1 {
-              width: 65px;
-              height: 65px;
+              width: ($px60 + 5);
+              height: ($px60 + 5);
             }
           }
         }
@@ -248,7 +248,7 @@
   .products {
     margin-top: -8px;
     margin-bottom: -8px;
-    padding: 50px;
+    padding: $px50;
     background: linear-gradient(91.69deg, #2E3554 23.05%, #37426E 75.09%);
     
     .rows {
@@ -256,21 +256,21 @@
       justify-content: space-between;
       align-items: center;
     
-      padding: 50px 20px;
+      padding: $px50 $px20;
       margin: 0 auto;
       max-width: 1200px;
     
       .text {
         h2 {
-          font-size: 3rem;
+          font-size: $font-size-11;
           font-weight: 900;
           margin: 0;
           color: $white;
         }
     
         p {
-          font-size: 1.4rem;
-          font-weight: 500;
+          font-size: $font-size-3;
+          font-weight: $font-weight-3;
           margin: 0;
           color: $white-600;
         }
@@ -282,7 +282,7 @@
     
         img {
           object-fit: cover;
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+          box-shadow: $shadow;
           transition: all 0.20s ease-in-out;
         }
     
@@ -294,44 +294,44 @@
           display: flex;
           flex-direction: column;
           align-items: flex-end;
-          gap: 10px;
+          gap: $gap-10;
 
           img.img1 {
-            width: 150px;
-            height: 150px;
+            width: ($px100 + 50);
+            height: ($px100 + 50);
           }
 
           img.img2 {
-            width: 110px;
-            height: 110px;
+            width: ($px100 + 10);
+            height: ($px100 + 10);
           } 
         }
     
         .col2, .col3 {
           display: flex;
           flex-direction: column;
-          gap: 10px;
+          gap: $gap-10;
     
           img.img1 {
-            width: 110px;
-            height: 110px;
+            width: ($px100 + 10);
+            height: ($px100 + 10);
           }
     
           img.img2 {
-            width: 110px;
-            height: 110px;
+            width: ($px100 + 10);
+            height: ($px100 + 10);
           }
         }
 
         .col3 {
           img.img1 {
-            width: 95px;
-            height: 95px;
+            width: ($px100 - 5);
+            height: ($px100 - 5);
           }
 
           img.img2 {
-            width: 95px;
-            height: 95px;
+            width: ($px100 - 5);
+            height: ($px100 - 5);
           }
         }
       }
@@ -354,57 +354,57 @@
 
       .rows {
         flex-direction: column;
-        gap: 20px;
+        gap: $gap-20;
     
         .text {
           text-align: center;
         }
     
         .images {
-          gap: 5px;
+          gap: $gap-5;
     
           .col1 {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            gap: 5px;
+            gap: $gap-5;
 
             img.img1 {
-              width: 100px;
-              height: 100px;
+              width: $px100;
+              height: $px100;
             }
 
             img.img2 {
-              width: 80px;
-              height: 80px;
+              width: $px80;
+              height: $px80;
             } 
           }
     
           .col2, .col3 {
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: $gap-5;
     
             img.img1 {
-              width: 80px;
-              height: 80px;
+              width: $px80;
+              height: $px80;
             }
     
             img.img2 {
-              width: 80px;
-              height: 80px;
+              width: $px80;
+              height: $px80;
             }
           }
 
           .col3 {
             img.img1 {
-              width: 70px;
-              height: 70px;
+              width: $px70;
+              height: $px70;
             }
 
             img.img2 {
-              width: 70px;
-              height: 70px;
+              width: $px70;
+              height: $px70;
             }
           }
         }
