@@ -117,26 +117,26 @@
 
       <div class="actions">
         <Button buttonInfo={{
-          text: "Buy now",
+          text: getLang().product.page.buttons.buy_now,
           type: "button",
           icon: "fa-brands fa-paypal"
         }} />
 
         <Button buttonInfo={{
-          text: "Add to cart",
+          text: getLang().product.page.buttons.add_to_cart,
           type: "button",
           icon: "fa-solid fa-shopping-cart",
           href: "/cart"
         }} />
 
         <Button buttonInfo={{
-          text: "Add to wishlist",
+          text: getLang().product.page.buttons.add_to_wishlist,
           type: "button",
           icon: "fa-solid fa-heart"
         }} />
 
         <Button buttonInfo={{
-          text: "Report",
+          text: getLang().product.page.buttons.report,
           type: "button",
           color: "red",
           icon: "fa-solid fa-flag"
