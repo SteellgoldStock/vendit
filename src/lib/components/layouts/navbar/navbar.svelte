@@ -4,7 +4,7 @@
 
 <div class="nav">
   <div class="logo">
-    <img src="/assets/logos/NavbarIcon.png" alt="Logo">
+    <a href="/"><img src="/assets/logos/NavbarIcon.png" alt="Logo"></a>
   </div>
 
   <div class="links" class:active={!active}>
