@@ -108,6 +108,12 @@
 
     @media (min-width: $breakpoint-xl) {
       footer {
+        height: $height-footer-lg;
+      }
+    }
+
+    @media (min-width: $breakpoint-xxl) {
+      footer {
         height: $height-footer;
       }
     }
