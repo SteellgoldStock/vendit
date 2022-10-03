@@ -68,7 +68,7 @@
       }
     }
 
-    @media screen and (max-width: 768px) {
+    @media (max-width: $breakpoint-md) {
       footer {
         flex-direction: column;
         padding: 1rem 0;
@@ -97,6 +97,18 @@
             }
           }
         }
+      }
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      footer {
+        height: $height-footer-lg;
+      }
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      footer {
+        height: $height-footer;
       }
     }
 </style>
