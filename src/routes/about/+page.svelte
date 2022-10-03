@@ -70,32 +70,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 20px;
+    padding: $px50 $px20;
     background: $primary;
     color: $white;
 
     @media (max-width: $breakpoint-md) {
-      padding: 10px 30px;
+      padding: $px10 $px30;
       text-align: center;
     }
 
     .title {
       h1 {
-        font-size: 3rem;
-        font-weight: 900;
+        font-size: $font-size-11;
+        font-weight: $font-weight-7;
         margin: 0;
       }
 
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: $px10;
     }
   }
 
   section.faq {
     margin-top: -8px;
     margin-bottom: -8px;
-    padding: 50px;
+    padding: $px50;
     background: linear-gradient(253.27deg, #2B324E 16.67%, rgba(58, 70, 118, 0.9) 47.32%);
   }
 </style>
