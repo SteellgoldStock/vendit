@@ -170,7 +170,7 @@
       .row1 {
         img {
           object-fit: cover;
-          border-radius: 10px;
+          border-radius: $image-radius;
         }
         
         .images {
@@ -255,7 +255,7 @@
     @media (max-width: $breakpoint-md) {
       .rows {
         flex-direction: column;
-        gap: 0;
+        gap: 25px;
 
         .row1 {
           width: 100%;
@@ -268,7 +268,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 10px;
+            border-radius: $image-radius;
           }
 
           .images {
