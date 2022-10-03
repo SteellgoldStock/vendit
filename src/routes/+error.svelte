@@ -84,21 +84,21 @@
 
     h1 {
       font-size: 7rem;
-      font-weight: 900;
+      font-weight: $font-weight-7;
       margin: 0;
-      color: white;
+      color: $white;
     }
 
     p {
-      font-size: 1.5rem;
-      font-weight: 400;
+      font-size: $font-size-3;
+      font-weight: $font-weight-2;
       margin: 0;
-      color: white;
+      color: $white;
     }
 
     .button {
-      margin-top: 40px;
-      padding: 10px;
+      margin-top: $px40;
+      padding: $px10;
     }
   }
 </style>
