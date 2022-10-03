@@ -10,5 +10,52 @@
 
     "plugins_title": "Acheter ou vendez",
     "plugins_subtitle": "Trouvez les plugins PocketMine les plus populaires ici, <br>ou vendez les vôtres !"
+  },
+  "about": {
+    "title": "À PROPOS DE VENDIT",
+    "subtitle": "Vendit est une place de marché pour les plugins de PocketMine, où vous pouvez acheter ou vendre vos propres plugins.",
+  
+    "accordions": {
+      "accordion_1": {
+        "title": "Combien cela coûte-t-il ?",
+        "text": "C'est <strong>gratuit</strong>, nous ne prenons que 5% de frais de transaction pour chaque paiement que vous recevez."
+      },
+      "accordion_2": {
+        "title": "Comment cela fonctionne-t-il ?",
+        "text": "Lorsque vous mettrez un plugin en ligne, vous définirez son prix, une fois qu'une personne l'aura acheté, la transaction sera payée sur votre compte PayPal dans les minutes suivantes<br>L'utilisateur recevra un lien par adresse e-mail pour accéder à la page de téléchargement sur laquelle il pourra télécharger le plugin seulement <strong>une fois</strong>."
+      },
+      "accordion_3": {
+        "title": "Le stockage de nos plugins est-il sécurisé ?",
+        "text": "Oui, nous utilisons un système de stockage sécurisé, nous ne stockons pas vos plugins sur nos serveurs, nous utilisons un CDN (Content Delivery Network) pour stocker vos plugins, un CDN est utilisé par de nombreux sites web tels que Google, Facebook, etc, toutes les demandes pour obtenir un plugin est validé ou non par un token, si le token n'est pas valide nous refusons la demande."
+      },
+      "accordion_4": {
+        "title": "Si je décide de supprimer un plugin des ventes, est-il supprimé de vos serveurs ?",
+        "text": "Oui, lorsque vous supprimez un plugin des ventes, il est supprimé de nos serveurs, et le lien de téléchargement n'est plus valide."
+      },
+      "accordion_5": {
+        "title": "Comment puis-je vous contacter ?",
+        "text": "Vous pouvez nous contacter à partir de l'adresse électronique, ou par le biais du service de tickets sur le site web."
+      },
+      "accordion_6": {
+        "title": "Comment puis-je supprimer mon compte ?",
+        "text": "Vous pouvez supprimer votre compte à partir de la page des paramètres, mais attention, une fois votre compte supprimé, vous ne pourrez plus accéder à vos plugins<br>Si vous êtes un vendeur et que vous avez des plugins à vendre, votre page vendeur ne sera plus accessible et vos plugins et données seront détruits<br>Vous pourrez annuler la suppression en vous reconnectant dans les 30 jours, après ces jours, il vous sera impossible de récupérer vos données."
+      },
+      "accordion_7": {
+        "title": "Si je me fais arnaquer, que dois-je faire ?",
+        "text": "Si vous êtes victime d'une arnaque, vous pouvez nous contacter par courrier électronique ou par le biais du service de tickets, nous serons en mesure de vous aider.<br><br><strong>Pour éviter de tels cas, voici ce que nous faisons : </strong><br>Tous les plugins proposés à la vente sont testés et vérifiés par notre équipe dans les 24 heures<br>Si un plugin est disponible sur le site, cela signifie qu'il fonctionne et qu'il n'a aucun problème !<br>Si un vendeur met à jour le fichier du plugin, il est également vérifié par notre équipe."
+      },
+      "accordion_8": {
+        "title": "Si un vendeur met à jour un plugin acheté, devrai-je payer à nouveau ?",
+        "text": "Cette question dépend du vendeur, si le vendeur quand il publie une mise à jour coche la case pour envoyer le plugin avec sa nouvelle version à ceux qui l'ont déjà acheté, dans ce cas vous n'avez pas besoin de payer, vous le recevrez par mail, ou dans le tableau de bord (un seul téléchargement possible, ne le perdez pas)<br>Sinon, vous devrez payer à nouveau, mais vous serez alerté de la mise à jour du plugin par mail et dans votre tableau de bord."
+      },
+      "accordion_9": {
+        "title": "Peut-on demander un remboursement ?",
+        "text": "Non, sinon il est trop facile d'obtenir des plugins gratuits, et c'est une perte de temps pour le développeur."
+      },
+      "accordion_10": {
+        "title": "Comment puis-je savoir qu'il ne s'agit pas d'une fuite ?",
+        "text": "Nous vérifions systématiquement les plugins, si nous avons un doute sur son origine nous le refusons,<br>Vous pouvez également faire passer le mot, si vous pensez qu'il en est un, vous pouvez le signaler sur sa page produit."
+      }
+    }
   }
 }

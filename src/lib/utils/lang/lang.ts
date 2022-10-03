@@ -3,10 +3,10 @@ import fr_FR from './fr_FR.json';
 
 export const getLang = (lang?: string) => {
   switch (lang) {
-    case 'fr_FR':
-      return fr_FR
+    case 'fr':
+      return fr_FR;
     default:
-      return en_US
+      return en_US;
   }
 }
 
