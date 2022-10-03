@@ -22,10 +22,6 @@
     <a href="/"><i class="fa-solid fa-chart-simple"></i>Statistics</a>
     <a href="/"><i class="fa-solid fa-bullhorn"></i>Alert</a>
   </div>
-
-  <!-- <div class="bottom">
-    <a href="/"><i class="fa-solid fa-sign-out"></i>Logout</a>
-  </div> -->
 </div>
 
 <style lang="scss">
@@ -140,23 +136,5 @@
         transform: translateX(0);
       }
     }
-
-    // .bottom {
-    //   // bottom of sidebar
-    //   bottom: 0;
-    //   width: 100%;
-    //   display: flex;
-    //   flex-direction: column;
-    //   gap: 10px;      
-
-    //   a {
-    //     color: white;
-    //     text-decoration: none;
-    //     font-size: 15px;
-    //     background-color: #3b4467;
-    //     padding: 10px;
-    //     border-radius: 10px;
-    //   }
-    // }
   }
 </style>
