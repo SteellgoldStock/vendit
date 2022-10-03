@@ -166,53 +166,6 @@
 
   .product {    
     .rows {
-      display: flex;
-      flex-direction: row;
-      gap: $gap-30;
-      width: 80%;
-      margin: 0 auto;
-
-      .row1 {
-        img {
-          object-fit: cover;
-          border-radius: $image-radius;
-        }
-        
-        .images {
-          display: flex;
-          flex-direction: row;
-          gap: $gap-10;
-          padding: $px10 0;
-          max-width: ($px100 * 5) + ($px10 * 3);
-          overflow-x: auto;
-
-          &::-webkit-scrollbar {
-            width: px10;
-            height: $px10;
-          }
-
-          &::-webkit-scrollbar-track {
-            box-shadow: inset 0 0 5px $primary;
-            border-radius: $image-radius;
-          }
-
-          &::-webkit-scrollbar-thumb {
-            background: $secondary;
-            border-radius: $px100;
-          }
-
-          img {
-            width: ($px100 * 5);
-            height: 100%;
-            object-fit: cover;
-
-            @media (max-width: $breakpoint-md) {
-              width: 100%;
-            }
-          }
-        }
-      }
-
       .row2 {
         .infos {
           color: $white;
@@ -268,14 +221,6 @@
           display: flex;
           flex-direction: column;
           gap: $gap-10;
-
-          img.pinned {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: $image-radius;
-          }
-
           .images {
             max-width: 100%;
           }
