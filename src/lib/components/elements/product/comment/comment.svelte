@@ -1,5 +1,6 @@
 <script lang="ts">
   import { Button } from '../../button';
+  import { getLang, params } from "$lib/utils/lang/lang";
 
   interface Comment {
     name: string;
@@ -25,12 +26,16 @@
 
   <div class="footer">
     <div class="infos">
-      <p class="note">Note de l'acheteur: <strong>{comment.rating}/5</strong></p>
-      <p class="text">Le {comment.date}</p>
+      <p class="note">
+        { @html params(getLang().product.comment.note, [ comment.rating ]) }
+      </p>
+      <p class="text">
+        { @html params(getLang().product.comment.date, [ comment.date ]) }
+      </p>
     </div>
     <div class="actions">
       <Button buttonInfo={{
-        text: 'Signaler',
+        text: getLang().product.comment.button,
         type: 'button',
         color: 'red',
         icon: 'fa-solid fa-exclamation-circle'

@@ -57,5 +57,16 @@
         "text": "Nous vérifions systématiquement les plugins, si nous avons un doute sur son origine nous le refusons,<br>Vous pouvez également faire passer le mot, si vous pensez qu'il en est un, vous pouvez le signaler sur sa page produit."
       }
     }
+  },
+  "product": {
+    "comment": {
+      "note": "Note de l'acheteur: <strong>{rating}/5</strong>",
+      "date": "Posté le: {date}",
+      "button": "Signaler"
+    },
+
+    "page": {
+      "selled_by": "Vendu par {seller_username} pour {price}€"
+    }
   }
 }

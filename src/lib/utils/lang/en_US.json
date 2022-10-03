@@ -57,5 +57,16 @@
         "text": "We systematically check the plugins, if we have any doubts about its origin we refuse it,<br>You can also spread the word, if you think it is one, you can report it on its product page"
       }
     }
+  },
+  "product": {
+    "comment": {
+      "note": "Buyer rating: <strong>{rating}/5</strong>",
+      "date": "Posted on <strong>{date}</strong>",
+      "button": "Report"
+    },
+
+    "page": {
+      "selled_by": "Selled by {seller_username} for {price}€"
+    }
   }
 }
