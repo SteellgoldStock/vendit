@@ -177,13 +177,13 @@
           display: flex;
           flex-direction: row;
           gap: $gap-10;
-          padding: 10px 0;
-          max-width: 500px;
+          padding: $px10 0;
+          max-width: ($px100 * 5) + ($px10 * 3);
           overflow-x: auto;
 
           &::-webkit-scrollbar {
-            width: 10px;
-            height: 10px;
+            width: px10;
+            height: $px10;
           }
 
           &::-webkit-scrollbar-track {
@@ -193,11 +193,11 @@
 
           &::-webkit-scrollbar-thumb {
             background: $secondary;
-            border-radius: 100px;
+            border-radius: $px100;
           }
 
           img {
-            width: 500px;
+            width: ($px100 * 5);
             height: 100%;
             object-fit: cover;
 
@@ -226,7 +226,7 @@
 
             img {
               border-radius: $image-radius * 10;
-              margin-right: 10px;
+              margin-right: $px10;
             }
 
             .now-price {
@@ -240,9 +240,9 @@
           display: flex;
           flex-direction: row;
           gap: $gap-10;
-          margin-top: 20px;
+          margin-top: $px20;
 
-          @media (max-width: 768px) {
+          @media (max-width: $breakpoint-md) {
             flex-direction: column;
             gap: $gap-10;
             width: 95%;
@@ -292,7 +292,7 @@
       gap: $gap-20;
       width: 80%;
       margin: 0 auto;
-      padding: 0 0 20px;
+      padding: 0 0 $px20;
     }
 
     @media (max-width: $breakpoint-md) {
@@ -308,7 +308,7 @@
             }
 
             .description {
-              margin-top: 10px;
+              margin-top: $px10;
               font-size: $font-size-5-md;
             }
           }
