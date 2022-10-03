@@ -1,7 +1,7 @@
 import en_US from './en_US.json';
 import fr_FR from './fr_FR.json';
 
-export const getLang = (lang?: string) => {
+export const getLang = (lang?: string) : any => {
   switch (lang) {
     case 'fr':
       return fr_FR;
@@ -10,10 +10,8 @@ export const getLang = (lang?: string) => {
   }
 }
 
-export const params = (str: string, params: any) => {
-  let result = str;
-  Object.keys(params).forEach(key => {
-    result = result.replace(new RegExp(`{${key}}`, 'g'), params[key]);
-  });
-  return result;
+export const params = (message: string, params?: any) : any => {;
+  const words = message.match(/\{[^}]+\}/g);
+  if (words) for (let i = 0; i < words.length; i++) message = message.replace(words[i], String(params[i]));
+  return message;
 }
