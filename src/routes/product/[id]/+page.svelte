@@ -104,7 +104,9 @@
       <div class="infos">
         <h1 class="title">{product.name}</h1>
         <div class="price">
-          <img src={product.seller.avatarURL} width="30px" height="30px" alt=""> 
+          <a href="/seller/{product.seller.name}">
+            <img src={product.seller.avatarURL} width="30px" height="30px" alt="">
+          </a>
           <h2 class="now-price">Selled by {product.seller.name} for {product.price}€</h2>
         </div>
         <p class="description">{@html product.description}</p>
