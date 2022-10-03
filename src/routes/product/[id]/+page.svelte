@@ -200,6 +200,10 @@
             width: 500px;
             height: 100%;
             object-fit: cover;
+
+            @media (max-width: $breakpoint-md) {
+              width: 100%;
+            }
           }
         }
       }
