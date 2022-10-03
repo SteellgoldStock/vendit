@@ -3,7 +3,6 @@
   import { Separator } from "$lib/components/elements/separator";
   import { getLang } from "$lib/utils/lang/lang";
 
-  // json to array
   let accordions: any = getLang().about.accordions;
   const faqs = Object.keys(accordions).map((key) => accordions[key]);
 </script>

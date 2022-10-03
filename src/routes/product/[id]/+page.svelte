@@ -3,6 +3,7 @@
   import { Separator } from "$lib/components/elements/separator";
   import { Stars } from "$lib/components/elements/stars";
   import { Comment } from "$lib/components/elements/product/comment";
+  import { getLang, params } from "$lib/utils/lang/lang";
 
   interface ProductInterface {
     slug: string;
@@ -107,7 +108,9 @@
           <a href="/seller/{product.seller.name}">
             <img src={product.seller.avatarURL} width="30px" height="30px" alt="">
           </a>
-          <h2 class="now-price">Selled by {product.seller.name} for {product.price}€</h2>
+          <h2 class="now-price">
+            { params(getLang().product.page.selled_by, [product.seller.name, product.price]) }
+          </h2>
         </div>
         <p class="description">{@html product.description}</p>
       </div>
