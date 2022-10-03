@@ -105,7 +105,7 @@
   "product": {
     "comment": {
       "note": "Buyer rating: <strong>{rating}/5</strong>",
-      "date": "Posted on <strong>{date}</strong>",
+      "date": "Posted on {date}",
       "button": "Report"
     },
 
