@@ -2,7 +2,7 @@
   interface ButtonInfo {
     type: "button" | "link";
     text: string;
-    color?: "blue" | "red" | "green" | "yellow" | "purple" | "orange" | "white";
+    color?: "blue" | "red" | "green" | "yellow" | "purple" | "orange" | "white" | "primary" | "secondary" | "tertiary";
     href?: string;
     icon?: string;
   }
@@ -43,6 +43,10 @@
     cursor: pointer;
   }
 
+  .button:hover {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+  }
+
   .blue {
     background-color: $blue;
   }
@@ -72,7 +76,21 @@
     color: $white-900;
   }
 
-  .button:hover {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
+  .primary {
+    background-color: $primary;
+  }
+
+  .secondary {
+    background-color: $secondary;
+  }
+
+  .tertiary {
+    background-color: $tertiary;
+
+    &:hover {
+      background-color: #212736;
+
+      box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.1);
+    }
   }
 </style>
