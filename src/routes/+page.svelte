@@ -35,6 +35,7 @@
           type: "link",
           text: getLang().homepage.sellers_button,
           icon: "fa-solid fa-plus",
+          color: "primary",
           href: "#"
         }} />
       </div>

@@ -27,7 +27,6 @@
     border-radius: $button-radius;
     text-decoration: none;
     border: none;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
 
@@ -76,9 +75,5 @@
         box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.1);
       }
     }
-  }
-
-  select:hover {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.50);
   }
 </style>
