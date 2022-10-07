@@ -4,7 +4,7 @@
   import { Stars } from "$lib/components/elements/stars";
   import { Comment } from "$lib/components/elements/product/comment";
   import { getLang, params } from "$lib/utils/lang/lang";
-    import { Select } from "$lib/components/elements/form/select";
+  import { Tag } from "$lib/components/elements/tag";
 
   interface ProductInterface {
     slug: string;
@@ -17,6 +17,16 @@
       avatarURL: string;
     };
     images: string[];
+
+    tech: {
+      version: string;
+      pmmpVersion: string;
+      phpMin: string;
+      liscence: string;
+
+      categories: string[];
+      tags: string[];
+    }
 
     comments: {
       name: string;
@@ -36,6 +46,15 @@
       name: "Squash",
       description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?",
       avatarURL: "https://cdn.discordapp.com/avatars/947125111981506601/f5ecce981646f5eaa0cf4c2eed88ca75.png?size=256"
+    },
+    tech: {
+      version: "1.0.0",
+      pmmpVersion: "5.3",
+      phpMin: "8.2",
+      liscence: "MIT",
+
+      categories: ["Economy", "Mini-Games"],
+      tags: ["tag1", "tag2"]
     },
     images: [
       "https://media.discordapp.net/attachments/951208784200630392/1018195129531650231/unknown.png",
@@ -165,7 +184,7 @@
   @import "../../../lib/scss/colors.scss";
   @import "../../../lib/scss/variables.scss";
 
-  .product {    
+  .product {
     .rows {
       display: flex;
       flex-direction: row;
@@ -302,26 +321,16 @@
       display: grid;
       grid-template-columns: repeat(4, 1fr);
     }
-  } 
 
     @media (max-width: $breakpoint-md) {
+      flex-direction: column;
+      gap: $gap-25;
+      width: 90%;
+      margin: 0 auto;
+
       .comments-list {
         grid-template-columns: repeat(1, 1fr);
-
-        .comment {
-          .infos {
-            .header {
-              .title {
-                font-size: $font-size-1;
-              }
-            }
-
-            .description {
-              margin-top: $px10;
-              font-size: $font-size-5-md;
-            }
-          }
-        }
       }
     }
+  } 
 </style>
