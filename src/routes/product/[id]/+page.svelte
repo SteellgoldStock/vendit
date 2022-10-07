@@ -4,6 +4,7 @@
   import { Stars } from "$lib/components/elements/stars";
   import { Comment } from "$lib/components/elements/product/comment";
   import { getLang, params } from "$lib/utils/lang/lang";
+    import { Select } from "$lib/components/elements/form/select";
 
   interface ProductInterface {
     slug: string;
@@ -153,10 +154,33 @@
 <br>
 
 <section class="comments">
-  <div class="comments-list">
-    {#each product.comments as comment}
-      <Comment comment={comment} />
-    {/each}
+  <div class="rows">
+    <div class="search">
+      <div class="search-bar">
+        <input type="text" placeholder="Search for specific words" />
+        <Button buttonInfo={{
+          text: "Search",
+          type: "button",
+          color: "tertiary",
+          icon: "fa-solid fa-search"
+        }} />
+        <Select options={
+          [
+            { value: "all", text: "Stars", disabled: true, selected: true },
+            { value: 1, text: "1 star" },
+            { value: 2, text: "2 stars" },
+            { value: 3, text: "3 stars" },
+            { value: 4, text: "4 stars" },
+            { value: 5, text: "5 stars" }
+          ]
+        } color="tertiary" />
+      </div>
+    </div>
+    <div class="comments-list">
+      {#each product.comments as comment}
+        <Comment comment={comment} />
+      {/each}
+    </div>
   </div>
 </section>
 
@@ -290,14 +314,51 @@
   }
 
   .comments {
-    .comments-list {
-      // 2 comments per row
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: $gap-20;
+    padding: 0 0 $px20;
+    
+    .rows {
+      display: flex;
+      flex-direction: column;
+      gap: $gap-30;
       width: 80%;
       margin: 0 auto;
-      padding: 0 0 $px20;
+
+      .search {
+        display: flex;
+        flex-direction: row;
+        gap: $gap-10;
+
+        .search-bar {
+          display: flex;
+          flex-direction: row;
+          gap: $gap-10;
+          width: 100%;
+          align-items: center;
+
+          input {
+            width: 75%;
+            padding: $px10;
+            border: none;
+            border-radius: $image-radius;
+            background-color: $tertiary;
+            color: $white;
+
+            &::placeholder {
+              color: $white-500;
+            }
+
+            &:focus {
+              outline: none;
+            }
+          }
+        }
+      }
+
+      .comments-list {
+        gap: $gap-15;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     @media (max-width: $breakpoint-md) {
