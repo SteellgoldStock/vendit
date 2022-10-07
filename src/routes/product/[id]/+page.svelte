@@ -2,7 +2,7 @@
   import { Button } from "$lib/components/elements/button";
   import { Separator } from "$lib/components/elements/separator";
   import { Stars } from "$lib/components/elements/stars";
-  import { Comment, PublishComment } from "$lib/components/elements/product/comment";
+  import { Comment } from "$lib/components/elements/product/comment";
   import { getLang, params } from "$lib/utils/lang/lang";
     import { Select } from "$lib/components/elements/form/select";
 
@@ -154,42 +154,10 @@
 <br>
 
 <section class="comments">
-  <div class="rows">
-    <div class="row1">
-      <div class="search-bar">
-        <input type="text" placeholder="Search for specific words" />
-      </div>
-      <div class="buttons">
-        <div class="select">
-          <Select options={
-            [
-              { value: "all", text: "Stars", disabled: true, selected: true },
-              { value: 1, text: "1 star" },
-              { value: 2, text: "2 stars" },
-              { value: 3, text: "3 stars" },
-              { value: 4, text: "4 stars" },
-              { value: 5, text: "5 stars" }
-            ]
-          } color="tertiary" />
-        </div>
-        <Button buttonInfo={{
-          text: "Search",
-          type: "button",
-          color: "tertiary",
-          icon: "fa-solid fa-search"
-        }} />
-      </div>
-    </div>
-    <div class="comments-list">
-      <PublishComment user={{
-        id: 123456789,
-        name: "Gaëtan",
-        avatarURL: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Gull_portrait_ca_usa.jpg/300px-Gull_portrait_ca_usa.jpg"
-      }} />
-      {#each product.comments as comment}
-        <Comment comment={comment} /> 
-      {/each}
-    </div>
+  <div class="comments-list">
+    {#each product.comments as comment}
+      <Comment comment={comment} /> 
+    {/each}
   </div>
 </section>
 
@@ -324,52 +292,17 @@
 
   .comments {
     padding: 0 0 $px20;
-    
-    .rows {
-      display: flex;
-      flex-direction: row;
-      width: 80%;
-      margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 0 auto;
 
-      .row1 {
-        width: 80%;
-
-        .search-bar {
-          width: 100%;
-          display: flex;
-          flex-direction: row;
-          gap: $gap-10;
-          align-items: center;
-
-          input {
-            width: 90%;
-            padding: $px10;
-            border: none;
-            border-radius: $image-radius;
-            background-color: $tertiary;
-            color: $white;
-            font-weight: $font-weight-3;
-            
-            &:focus {
-              outline: none;
-            }
-          }
-        }
-
-        .buttons {
-          display: flex;
-          flex-direction: row;
-          gap: $gap-10;
-          margin-top: $px10 - 5;
-        }
-      }
-
-      .comments-list {
-        gap: $gap-15;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-      }
-    } 
+    .comments-list {
+      gap: $gap-15;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  } 
 
     @media (max-width: $breakpoint-md) {
       .comments-list {
@@ -391,5 +324,4 @@
         }
       }
     }
-  }
 </style>
