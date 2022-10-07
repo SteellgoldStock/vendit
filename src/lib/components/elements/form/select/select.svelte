@@ -21,14 +21,17 @@
   @import "../../../../scss/variables.scss";
 
   select {
-    background-color: #3b4b80;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 20px 10px 10px;
     border-radius: $button-radius;
     text-decoration: none;
     border: none;
-    transition: all 0.2s ease-in-out;
+
     cursor: pointer;
+    
+    &:focus {
+      outline: none;
+    }
 
     &.blue {
       background-color: $blue;
@@ -72,7 +75,6 @@
 
       &:hover {
         background-color: #212736;
-        box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.1);
       }
     }
   }
