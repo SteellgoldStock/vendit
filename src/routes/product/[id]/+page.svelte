@@ -113,6 +113,31 @@
           </h2>
         </div>
         <p class="description">{@html product.description}</p>
+        <hr>
+        <div class="specs">
+          <table>
+            <tr>
+              <th>Catégorie</th>
+              <td>Économie</td>
+            </tr>
+            <tr>
+              <th>Version</th>
+              <td>1.0.0</td>
+            </tr>
+            <tr>
+              <th>Version PocketMine-MP</th>
+              <td>5.2.0</td>
+            </tr>
+            <tr>
+              <th>Langue configurable</th>
+              <td>Oui (Français, Anglais)</td>
+            </tr>
+            <tr>
+              <th>Configuration</th>
+              <td>Oui (<code>config.yml</code>, <code>messages.yml</code>)</td>
+            </tr>
+          </table>
+        </div>
       </div>
 
       <div class="actions">
@@ -237,6 +262,33 @@
             .now-price {
               font-size: $font-size-1;
               font-weight: $font-weight-3;
+            }
+          }
+
+          .specs {
+            table {
+              width: 100%;
+              border-collapse: collapse;
+              border-spacing: 0;
+              border: 1px solid $primary;
+
+              th {
+                padding: $px10;
+                background-color: $primary;
+                color: $white;
+                text-align: left;
+              }
+
+              td {
+                padding: $px10;
+                background-color: $secondary;
+                color: $white;
+                text-align: left;
+
+                code {
+                  background-color: $primary;
+                }
+              }
             }
           }
         }
