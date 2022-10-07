@@ -112,7 +112,8 @@
       }
 
       @media (max-width: $breakpoint-md) {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
       }
     }
   }
