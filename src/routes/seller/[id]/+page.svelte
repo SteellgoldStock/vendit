@@ -19,7 +19,19 @@
     name: string;
     description: string;
     avatarURL: string;
-    products: ProductInterface[];
+    products?: ProductInterface[];
+
+    social: {
+      facebook?: string;
+      twitter?: string;
+      instagram?: string;
+      youtube?: string;
+
+      in: {
+        followers: number;
+        following: number;
+      }
+    };
   }
 
   let seller: SellerInterface = {
@@ -27,70 +39,18 @@
     name: "Squash",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?",
     avatarURL: "https://cdn.discordapp.com/avatars/947125111981506601/f5ecce981646f5eaa0cf4c2eed88ca75.png?size=256",
-    products: [
-      {
-        slug: "1",
-        name: "Squash",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?",
-        price: 10,
-        images: [
-          "https://cdn.discordapp.com/attachments/887202202000578580/887202222200946708/unknown.png",
-          "https://cdn.discordapp.com/attachments/887202202000578580/887202222200946708/unknown.png",
-          "https://cdn.discordapp.com/attachments/887202202000578580/887202222200946708/unknown.png",
-        ],
-        comments: [
-          {
-            name: "Squash",
-            comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?",
-            rating: 5,
-            avatarURL: "https://cdn.discordapp.com/avatars/947125111981506601/f5ecce981646f5eaa0cf4c2eed88ca75.png?size=256",
-          },
-          {
-            name: "Squash",
-            comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?",
-            rating: 5,
-            avatarURL: "https://cdn.discordapp.com/avatars/947125111981506601/f5ecce981646f5eaa0cf4c2eed88ca75.png?size=256",
-          },
-          {
-            name: "Squash",
-            comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?",
-            rating: 5,
-            avatarURL: "https://cdn.discordapp.com/avatars/947125111981506601/f5ecce981646f5eaa0cf4c2eed88ca75.png?size=256",
-          },
-        ],
-      },
-      {
-        slug: "2",
-        name: "Squash",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?",
-        price: 10,
-        images: [
-          "https://cdn.discordapp.com/attachments/887202202000578580/887202222200946708/unknown.png",
-          "https://cdn.discordapp.com/attachments/887202202000578580/887202222200946708/unknown.png",
-          "https://cdn.discordapp.com/attachments/887202202000578580/887202222200946708/unknown.png",
-        ],
-        comments: [
-          {
-            name: "Squash",
-            comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?",
-            rating: 5,
-            avatarURL: "https://cdn.discordapp.com/avatars/947125111981506601/f5ecce981646f5eaa0cf4c2eed88ca75.png?size=256",
-          },
-          {
-            name: "Squash",
-            comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?",
-            rating: 5,
-            avatarURL: "https://cdn.discordapp.com/avatars/947125111981506601/f5ecce981646f5eaa0cf4c2eed88ca75.png?size=256",
-          },
-          {
-            name: "Squash",
-            comment: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, minus cum. Ut nam debitis aspernatur molestias non exercitationem, impedit cupiditate?",
-            rating: 5,
-            avatarURL: "https://cdn.discordapp.com/avatars/947125111981506601/f5ecce981646f5eaa0cf4c2eed88ca75.png?size=256",
-          },
-        ],
-      },
-    ]
+
+    social: {
+      facebook: "https://facebook.com",
+      twitter: "https://twitter.com",
+      instagram: "https://instagram.com",
+      youtube: "https://youtube.com",
+
+      in: {
+        followers: 59,
+        following: 12
+      }
+    }
   };
 </script>
 
@@ -115,12 +75,12 @@
 
   <div class="presentation__stats">
     <div class="presentation__stats__stat">
-      <h1 class="presentation__stats__stat__value">0</h1>
+      <h1 class="presentation__stats__stat__value">{seller.social.in.followers}</h1>
       <p class="presentation__stats__stat__label">Followers</p>
     </div>
 
     <div class="presentation__stats__stat">
-      <h1 class="presentation__stats__stat__value">0</h1>
+      <h1 class="presentation__stats__stat__value">{seller.social.in.following}</h1>
       <p class="presentation__stats__stat__label">Following</p>
     </div>
 
