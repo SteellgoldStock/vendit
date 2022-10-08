@@ -4,6 +4,7 @@
   import { Stars } from "$lib/components/elements/stars";
   import { Comment, ReviewAlert } from "$lib/components/elements/product/comment";
   import { getLang, params } from "$lib/utils/lang/lang";
+    import { Table } from "$lib/components/elements/table";
 
   interface ProductInterface {
     slug: string;
@@ -132,6 +133,8 @@
           <img src={image} alt={product.name} />
         {/each}
       </div>
+      <br>
+      <Table />
     </div>
 
     <div class="row2">
@@ -148,7 +151,10 @@
             { params(getLang().product.page.selled_by, [product.seller.name, product.price]) }
           </h2>
         </div>
+        <div class="alert">
+          <ReviewAlert buyDate="29/10/2019" />
         </div>
+        <p class="description">{@html product.description}</p>
       </div>
 
       <div class="actions">
@@ -247,6 +253,33 @@
             }
           }
         }
+
+        .specs {
+            table {
+              width: 100%;
+              border-collapse: collapse;
+              border-spacing: 0;
+              border: 1px solid $primary;
+
+              th {
+                padding: $px10;
+                background-color: $primary;
+                color: $white;
+                text-align: left;
+              }
+
+              td {
+                padding: $px10;
+                background-color: $secondary;
+                color: $white;
+                text-align: left;
+
+                code {
+                  background-color: $primary;
+                }
+              }
+            }
+          }
       }
 
       .row2 {
