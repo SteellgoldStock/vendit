@@ -113,7 +113,6 @@
     category: "Economy"
   };
 
-  // global note from all comments
   let rating: number = 0;
   product.comments.forEach((comment) => {
     rating += comment.rating;
@@ -134,7 +133,18 @@
         {/each}
       </div>
       <br>
-      <Table />
+      <Table table={{
+        orientation: 'horizontal',
+        title: 'Features of the plug-in',
+        headers: [],
+        rows: [
+          ["Category", "Economy"],
+          ["PocketMine-MP", "5.2.0"],
+          ["File size","1.5 Mo"],
+          ["Language","Français"],
+          ["License","MIT"]
+        ],
+      }} />
     </div>
 
     <div class="row2">
@@ -152,7 +162,9 @@
           </h2>
         </div>
         <div class="alert">
-          <ReviewAlert buyDate="29/10/2019" />
+          <ReviewAlert>
+            You bought this plugin on <strong>29/01/2021</strong>, give your opinion!
+          </ReviewAlert>
         </div>
         <p class="description">{@html product.description}</p>
       </div>

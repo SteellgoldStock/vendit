@@ -6,18 +6,7 @@
     rows: string[][];
   }
 
-  export let table: Table = {
-    orientation: 'horizontal',
-    title: 'Caratéristiques du produit',
-    headers: [],
-    rows: [
-      ["Catégorie", "Économie"],
-      ["PocketMine-MP", "5.2.0"],
-      ["Taille","1.5 Mo"],
-      ["Langue","Français"],
-      ["Licence","MIT"]
-    ],
-  };
+  export let table: Table;
 </script>
 
 {#if table.orientation === "vertical"}
