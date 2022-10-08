@@ -24,6 +24,25 @@
       avatarURL: string;
       date: string;
     }[];
+
+    version: {
+      plugin: string;
+      pocketmine: string;
+      php: string;
+    };
+
+    stats: {
+      views: number;
+      buys: number;
+    };
+
+    config?: {
+      available: boolean;
+      files: string[];
+    },
+
+    tags?: string[];
+    category: string;
   }
 
   let product: ProductInterface = {
@@ -72,8 +91,25 @@
       rating: 4,
       avatarURL: "https://cdn.discordapp.com/avatars/371298344921726978/2e12f0a06b95725bf492c1a22e43b4b6.png?size=256",
       date: "13/09/2021"
-    }
-  ]
+    }],
+
+    version: {
+      plugin: "1.0.0",
+      pocketmine: "5.0.1",
+      php: "8.0.0"
+    },
+
+    stats: {
+      views: 1293,
+      buys: 418
+    },
+
+    config: {
+      available: true,
+      files: ["config.yml", "messages.yml"],
+    },
+
+    category: "Economy"
   };
 
   // global note from all comments
