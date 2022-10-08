@@ -7,7 +7,7 @@
 
   export let slider: Slider;
 
-  let value = 0;
+  export let value = 0;
 </script>
 
 <div class="slider">
@@ -19,8 +19,6 @@
   @import '../../../../scss/variables.scss';
 
   .slider {
-    width: 100%;
-
     input[type=range] {
       -webkit-appearance: none;
       width: 100%;
