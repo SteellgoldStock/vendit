@@ -2,7 +2,7 @@
   import { Button } from "$lib/components/elements/button";
   import { Separator } from "$lib/components/elements/separator";
   import { Stars } from "$lib/components/elements/stars";
-  import { Comment } from "$lib/components/elements/product/comment";
+  import { Comment, ReviewAlert } from "$lib/components/elements/product/comment";
   import { getLang, params } from "$lib/utils/lang/lang";
 
   interface ProductInterface {
@@ -148,31 +148,6 @@
             { params(getLang().product.page.selled_by, [product.seller.name, product.price]) }
           </h2>
         </div>
-        <p class="description">{@html product.description}</p>
-        <hr>
-        <div class="specs">
-          <table>
-            <tr>
-              <th>Catégorie</th>
-              <td>Économie</td>
-            </tr>
-            <tr>
-              <th>Version</th>
-              <td>1.0.0</td>
-            </tr>
-            <tr>
-              <th>Version PocketMine-MP</th>
-              <td>5.2.0</td>
-            </tr>
-            <tr>
-              <th>Langue configurable</th>
-              <td>Oui (Français, Anglais)</td>
-            </tr>
-            <tr>
-              <th>Configuration</th>
-              <td>Oui (<code>config.yml</code>, <code>messages.yml</code>)</td>
-            </tr>
-          </table>
         </div>
       </div>
 
@@ -300,33 +275,6 @@
               font-weight: $font-weight-3;
             }
           }
-
-          .specs {
-            table {
-              width: 100%;
-              border-collapse: collapse;
-              border-spacing: 0;
-              border: 1px solid $primary;
-
-              th {
-                padding: $px10;
-                background-color: $primary;
-                color: $white;
-                text-align: left;
-              }
-
-              td {
-                padding: $px10;
-                background-color: $secondary;
-                color: $white;
-                text-align: left;
-
-                code {
-                  background-color: $primary;
-                }
-              }
-            }
-          }
         }
 
         .actions {
@@ -424,7 +372,7 @@
   .comments {
     padding: 0 0 $px20;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 80%;
     margin: 0 auto;
 
