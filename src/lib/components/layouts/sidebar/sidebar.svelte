@@ -25,8 +25,8 @@
 </div>
 
 <style lang="scss">
-  @import "../../../scss/colors.scss";
-  @import "../../../scss/variables.scss";
+  @import "src/lib/scss/colors.scss";
+  @import "src/lib/scss/variables.scss";
 
   .hr-text {
     // from https://gist.github.com/scottzirkel/25dd7073cdf976864ad4

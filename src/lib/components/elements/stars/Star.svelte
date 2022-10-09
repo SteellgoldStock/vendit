@@ -6,7 +6,7 @@
 <i class="fa-solid fa-star {half ? "half" : ""} {disabled ? "disabled" : ""}"></i>
 
 <style lang="scss">
-  @import "../../../scss/colors.scss";
+  @import "src/lib/scss/colors.scss";
   
   i.half {
     color: $yellow;

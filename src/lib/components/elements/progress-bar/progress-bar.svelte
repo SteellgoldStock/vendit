@@ -21,8 +21,8 @@
 </div>
 
 <style type="scss">
-  @import "../../../scss/colors.scss";
-  @import "../../../scss/variables.scss";
+  @import "src/lib/scss/colors.scss";
+  @import "src/lib/scss/variables.scss";
 
   .progressbar {
     position: absolute;

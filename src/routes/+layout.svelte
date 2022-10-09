@@ -19,7 +19,7 @@
 </div>
 
 <style lang="scss">
-  @import "../lib/scss/variables.scss";
+  @import "src/lib/scss/variables.scss";
 
   .content {
     .page {

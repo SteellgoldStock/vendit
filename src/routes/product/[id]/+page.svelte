@@ -4,7 +4,7 @@
   import { Stars } from "$lib/components/elements/stars";
   import { Comment, ReviewAlert } from "$lib/components/elements/product/comment";
   import { getLang, params } from "$lib/utils/lang/lang";
-    import { Table } from "$lib/components/elements/table";
+  import { HorizontalTable, VerticalTable } from "$lib/components/elements/table";
 
   interface ProductInterface {
     slug: string;
@@ -133,17 +133,16 @@
         {/each}
       </div>
       <br>
-      <Table table={{
-        orientation: 'horizontal',
-        title: 'Features of the plug-in',
-        headers: [],
+
+      <HorizontalTable table={{
+        title: "Informations",
         rows: [
           ["Category", "Economy"],
           ["PocketMine-MP", "5.2.0"],
           ["File size","1.5 Mo"],
           ["Language","Français"],
           ["License","MIT"]
-        ],
+        ]
       }} />
     </div>
 
@@ -215,8 +214,8 @@
 </section>
 
 <style lang="scss">
-  @import "../../../lib/scss/colors.scss";
-  @import "../../../lib/scss/variables.scss";
+  @import "src/lib/scss/colors.scss";
+  @import "src/lib/scss/variables.scss";
 
   .product {
     .rows {
