@@ -53,45 +53,45 @@
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+  }
 
-    &.vertical {
-      thead {
-        tr {
-          th {
-            padding: 0.5rem;
-            background-color: $secondary;
-            color: $white;
-            text-align: left;
-          }
-        }
-      }
-
-      tbody {
-        tr {
-          td {
-            padding: 0.5rem;
-            background-color: $tertiary;
-            color: $white;
-          }
-        }
-      }
-    }
-
-    &.horizontal {
+  table.vertical {
+    thead {
       tr {
-        th,
-        td {
+        th {
           padding: 0.5rem;
           background-color: $secondary;
           color: $white;
           text-align: left;
         }
+      }
+    }
 
-        td.subject {
+    tbody {
+      tr {
+        td {
+          padding: 0.5rem;
           background-color: $tertiary;
           color: $white;
-          font-weight: 600;
         }
+      }
+    }
+  }
+
+  table.horizontal {
+    tr {
+      th,
+      td {
+        padding: 0.5rem;
+        background-color: $secondary;
+        color: $white;
+        text-align: left;
+      }
+
+      td.subject {
+        background-color: $tertiary;
+        color: $white;
+        font-weight: 600;
       }
     }
   }
