@@ -59,39 +59,42 @@
 </svelte:head>
 
 <section class="presentation">
-  <div class="presentation__avatar">
+  <div class="top">
+    <div class="banner">
+      <img src="https://media.discordapp.net/attachments/951208784200630392/1012395263828181062/Rectangle_123_1.png" alt="Banner">
+    </div>
     <img src={seller.avatarURL} alt={seller.name} />
   </div>
 
-  <div class="presentation__content">
-    <h1 class="presentation__content__name">{seller.name}</h1>
-    <p class="presentation__content__description">{seller.description}</p>
+  <div class="header">
+    <h1 class="seller_name">{seller.name}</h1>
+    <p class="seller_description">{seller.description}</p>
   </div>
 
-  <div class="presentation__actions">
-    <button class="presentation__actions__button">Follow</button>
-    <button class="presentation__actions__button">Message</button>
+  <div class="actions">
+    <button class="action follow">Follow</button>
+    <button class="action message">Message</button>
   </div>
 
-  <div class="presentation__stats">
-    <div class="presentation__stats__stat">
-      <h1 class="presentation__stats__stat__value">{seller.social.in.followers}</h1>
-      <p class="presentation__stats__stat__label">Followers</p>
+  <div class="stats">
+    <div class="row">
+      <h1 class="stats_value">{seller.social.in.followers}</h1>
+      <p class="stats_label">Followers</p>
     </div>
 
-    <div class="presentation__stats__stat">
-      <h1 class="presentation__stats__stat__value">{seller.social.in.following}</h1>
-      <p class="presentation__stats__stat__label">Following</p>
+    <div class="row">
+      <h1 class="stats_value">{seller.social.in.following}</h1>
+      <p class="stats_label">Following</p>
     </div>
 
-    <div class="presentation__stats__stat">
-      <h1 class="presentation__stats__stat__value">0</h1>
-      <p class="presentation__stats__stat__label">Products</p>
+    <div class="row">
+      <h1 class="stats_value">0</h1>
+      <p class="stats_label">Products</p>
     </div>
 
-    <div class="presentation__stats__stat">
-      <h1 class="presentation__stats__stat__value">0</h1>
-      <p class="presentation__stats__stat__label">Comments</p>
+    <div class="row">
+      <h1 class="stats_value">0</h1>
+      <p class="stats_label">Comments</p>
     </div>
 </section>
 
@@ -101,71 +104,103 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    padding: 1rem;
 
-    &__avatar {
-      width: 10rem;
-      height: 10rem;
-      border-radius: 50%;
-      overflow: hidden;
+    .top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      .banner {
+        width: 100%;
+        height: 10rem;
+        border-radius: 1rem;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
 
       img {
-        width: 100%;
-        height: 100%;
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
         object-fit: cover;
       }
     }
 
-    &__content {
+    .header {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 0.5rem;
 
-      &__name {
-        font-size: 1.5rem;
+      .seller_name {
+        font-size: 2rem;
         font-weight: 600;
       }
 
-      &__description {
+      .seller_description {
         font-size: 1rem;
         font-weight: 400;
         text-align: center;
       }
     }
 
-    &__actions {
-      display: flex;
-      gap: 0.5rem;
-
-      &__button {
-        padding: 0.5rem 1rem;
-        border: none;
-        border-radius: 0.5rem;
-        background-color: #2f3136;
-        color: #fff;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-      }
-    }
-
-    &__stats {
+    .actions {
       display: flex;
       gap: 1rem;
 
-      &__stat {
+      .action {
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        border: none;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &.follow {
+          background-color: var(--color-primary);
+          color: var(--color-white);
+
+          &:hover {
+            background-color: var(--color-primary-dark);
+          }
+        }
+
+        &.message {
+          background-color: var(--color-white);
+          color: var(--color-primary);
+          border: 1px solid var(--color-primary);
+
+          &:hover {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+          }
+        }
+      }
+    }
+
+    .stats {
+      display: flex;
+      gap: 1rem;
+
+      .row {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 0.5rem;
 
-        &__value {
+        .stats_value {
           font-size: 1.5rem;
           font-weight: 600;
         }
 
-        &__label {
+        .stats_label {
           font-size: 1rem;
           font-weight: 400;
         }
