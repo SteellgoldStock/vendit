@@ -144,27 +144,6 @@
           ["License","MIT"]
         ]
       }} />
-
-      <br>
-      
-      <VerticalTable table={{
-        title: "Stats",
-        headers: ["Month", "Views", "Buys"],
-        rows: [
-          ["January", "1293", "418"],
-          ["February", "1293", "418"],
-          ["March", "1293", "418"],
-          ["April", "1293", "418"],
-          ["May", "1293", "418"],
-          ["June", "1293", "418"],
-          ["July", "1293", "418"],
-          ["August", "1293", "418"],
-          ["September", "1293", "418"],
-          ["October", "1293", "418"],
-          ["November", "1293", "418"],
-          ["December", "1293", "418"]
-        ]
-      }} />
     </div>
 
     <div class="row2">

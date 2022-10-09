@@ -31,32 +31,8 @@
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
   }
 
-  table.vertical {
-    thead {
-      tr {
-        th {
-          padding: 0.5rem;
-          background-color: $secondary;
-          color: $white;
-          text-align: left;
-        }
-      }
-    }
-
-    tbody {
-      tr {
-        td {
-          padding: 0.5rem;
-          background-color: $tertiary;
-          color: $white;
-        }
-      }
-    }
-  }
-
   table.horizontal {
     tr {
-      th,
       td {
         padding: 0.5rem;
         background-color: $secondary;
