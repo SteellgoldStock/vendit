@@ -28,8 +28,8 @@
 {/if}
 
 <style lang="scss">
-  @import "../../../scss/colors.scss";
-  @import "../../../scss/variables.scss";
+  @import "src/lib/scss/colors.scss";
+  @import "src/lib/scss/variables.scss";
 
   .button {
     background-color: #3D486B;

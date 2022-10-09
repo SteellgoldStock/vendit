@@ -215,8 +215,8 @@
 </section>
 
 <style lang="scss">
-  @import "../../../lib/scss/colors.scss";
-  @import "../../../lib/scss/variables.scss";
+  @import "src/lib/scss/colors.scss";
+  @import "src/lib/scss/variables.scss";
 
   .product {
     .rows {

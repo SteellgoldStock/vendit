@@ -86,8 +86,8 @@
 </div>
 
 <style lang="scss">
-  @import "../../src/lib/scss/colors.scss";
-  @import "../../src/lib/scss/variables.scss";
+  @import "src/lib/scss/colors.scss";
+  @import "src/lib/scss/variables.scss";
 
   .header {
     display: flex;
