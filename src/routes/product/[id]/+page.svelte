@@ -312,7 +312,7 @@
 
     @media (max-width: $breakpoint-md) {
       .rows {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: $gap-25;
 
         .row1 {
