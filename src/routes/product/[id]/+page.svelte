@@ -4,7 +4,7 @@
   import { Stars } from "$lib/components/elements/stars";
   import { Comment, ReviewAlert } from "$lib/components/elements/product/comment";
   import { getLang, params } from "$lib/utils/lang/lang";
-    import { Table } from "$lib/components/elements/table";
+  import { HorizontalTable, VerticalTable } from "$lib/components/elements/table";
 
   interface ProductInterface {
     slug: string;
@@ -133,17 +133,37 @@
         {/each}
       </div>
       <br>
-      <Table table={{
-        orientation: 'horizontal',
-        title: 'Features of the plug-in',
-        headers: [],
+
+      <HorizontalTable table={{
+        title: "Informations",
         rows: [
           ["Category", "Economy"],
           ["PocketMine-MP", "5.2.0"],
           ["File size","1.5 Mo"],
           ["Language","Français"],
           ["License","MIT"]
-        ],
+        ]
+      }} />
+
+      <br>
+      
+      <VerticalTable table={{
+        title: "Stats",
+        headers: ["Month", "Views", "Buys"],
+        rows: [
+          ["January", "1293", "418"],
+          ["February", "1293", "418"],
+          ["March", "1293", "418"],
+          ["April", "1293", "418"],
+          ["May", "1293", "418"],
+          ["June", "1293", "418"],
+          ["July", "1293", "418"],
+          ["August", "1293", "418"],
+          ["September", "1293", "418"],
+          ["October", "1293", "418"],
+          ["November", "1293", "418"],
+          ["December", "1293", "418"]
+        ]
       }} />
     </div>
 
